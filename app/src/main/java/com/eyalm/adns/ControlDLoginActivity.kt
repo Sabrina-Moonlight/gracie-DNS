@@ -38,6 +38,21 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import com.eyalm.adns.data.Locales
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.material3.OutlinedCard
+import androidx.compose.foundation.clickable
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.eyalm.adns.data.controld.ControlDEndpoint
+import com.eyalm.adns.data.controld.ControlDFilter
+import androidx.compose.material3.Switch
+import androidx.compose.material3.TextButton
+import com.eyalm.adns.data.provider.DnsProviderSelection
+import com.eyalm.adns.data.provider.PrivateDnsHostname
+import com.eyalm.adns.data.provider.SavedCustomDnsStore
+import com.eyalm.adns.viewmodel.SettingsViewModel
 import com.eyalm.adns.data.controld.ControlDFailureKind
 import com.eyalm.adns.data.controld.ControlDRepository
 import com.eyalm.adns.data.controld.ControlDResult
@@ -72,6 +87,33 @@ private fun ControlDLoginScreen(onBack: () -> Unit) {
     var token by remember { mutableStateOf("") }
     var loading by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<ControlDFailureKind?>(null) }
+    val settingsViewModel: SettingsViewModel = viewModel()
+    val endpoints = remember { mutableStateListOf<ControlDEndpoint>() }
+    var endpointsLoading by remember { mutableStateOf(false) }
+    var endpointsFailed by remember { mutableStateOf(false) }
+    var appliedId by remember { mutableStateOf<String?>(null) }
+    val profileFilters = remember { mutableStateMapOf<String, List<ControlDFilter>?>() }
+    var editingProfile by remember { mutableStateOf<String?>(null) }
+    var filterChangeFailed by remember { mutableStateOf(false) }
+
+    LaunchedEffect(connected) {
+        if (!connected) return@LaunchedEffect
+        endpointsLoading = true
+        endpointsFailed = false
+        val result = ControlDRepository(tokenProvider = { store.getToken() }).getEndpoints()
+        endpointsLoading = false
+        when (result) {
+            is ControlDResult.Success -> {
+                endpoints.clear()
+                endpoints.addAll(result.value)
+            }
+            is ControlDResult.Failure -> endpointsFailed = true
+        }
+        endpoints.mapNotNull { it.profileId }.distinct().forEach { id ->
+            profileFilters[id] = (ControlDRepository(tokenProvider = { store.getToken() })
+                .getFilters(id) as? ControlDResult.Success)?.value
+        }
+    }
 
     Column(
         modifier = Modifier
@@ -100,9 +142,116 @@ private fun ControlDLoginScreen(onBack: () -> Unit) {
                 style = MaterialTheme.typography.titleMedium,
             )
             email?.let { Text(text = it) }
+            Text(
+                text = stringResource(R.string.controld_endpoints_title),
+                style = MaterialTheme.typography.titleMedium,
+            )
+            Text(text = stringResource(R.string.controld_endpoints_help))
+            if (endpointsLoading) CircularProgressIndicator()
+            if (endpointsFailed) {
+                Text(
+                    text = stringResource(R.string.controld_endpoints_error),
+                    color = MaterialTheme.colorScheme.error,
+                )
+            }
+            if (!endpointsLoading && !endpointsFailed && endpoints.isEmpty()) {
+                Text(text = stringResource(R.string.controld_endpoints_empty))
+            }
+            endpoints.forEach { endpoint ->
+                val host = endpoint.dotHost?.let { PrivateDnsHostname.parse(it)?.ascii }
+                OutlinedCard(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable(enabled = host != null) {
+                            host?.let {
+                                SavedCustomDnsStore.add(context, it)
+                                settingsViewModel.setProvider(DnsProviderSelection.Custom(it))
+                                appliedId = endpoint.id
+                            }
+                        },
+                ) {
+                    Column(modifier = Modifier.padding(12.dp)) {
+                        Text(text = endpoint.name, style = MaterialTheme.typography.titleSmall)
+                        endpoint.profileName?.let { Text(text = it) }
+                        endpoint.profileId?.let { pid ->
+                            if (profileFilters.containsKey(pid)) {
+                                val list = profileFilters[pid]
+                                val activeList = list?.filter { it.enabled }
+                                Text(
+                                    text = when {
+                                        list == null -> stringResource(R.string.controld_filters_error)
+                                        activeList.isNullOrEmpty() -> stringResource(R.string.controld_filters_none)
+                                        else -> stringResource(R.string.controld_filters_active) +
+                                            " " + activeList.joinToString(", ") { it.name }
+                                    },
+                                    style = MaterialTheme.typography.bodySmall,
+                                )
+                                if (!list.isNullOrEmpty()) {
+                                    TextButton(onClick = {
+                                        editingProfile = if (editingProfile == pid) null else pid
+                                        filterChangeFailed = false
+                                    }) {
+                                        Text(
+                                            stringResource(
+                                                if (editingProfile == pid) R.string.controld_filters_done
+                                                else R.string.controld_filters_edit
+                                            )
+                                        )
+                                    }
+                                }
+                                if (editingProfile == pid && list != null) {
+                                    if (filterChangeFailed) {
+                                        Text(
+                                            text = stringResource(R.string.controld_filter_change_error),
+                                            color = MaterialTheme.colorScheme.error,
+                                            style = MaterialTheme.typography.bodySmall,
+                                        )
+                                    }
+                                    list.forEach { filter ->
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            verticalAlignment = Alignment.CenterVertically,
+                                        ) {
+                                            Text(text = filter.name, modifier = Modifier.weight(1f))
+                                            Switch(
+                                                checked = filter.enabled,
+                                                onCheckedChange = { wanted ->
+                                                    filterChangeFailed = false
+                                                    scope.launch {
+                                                        val result = ControlDRepository(
+                                                            tokenProvider = { store.getToken() }
+                                                        ).setFilterEnabled(pid, filter.id, wanted)
+                                                        if (result is ControlDResult.Success) {
+                                                            profileFilters[pid] = profileFilters[pid]?.map {
+                                                                if (it.id == filter.id) it.copy(enabled = wanted) else it
+                                                            }
+                                                        } else {
+                                                            filterChangeFailed = true
+                                                        }
+                                                    }
+                                                },
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        Text(text = host ?: stringResource(R.string.controld_endpoint_no_host))
+                        if (appliedId == endpoint.id) {
+                            Text(
+                                text = stringResource(R.string.controld_endpoint_applied),
+                                color = MaterialTheme.colorScheme.primary,
+                            )
+                        }
+                    }
+                }
+            }
             OutlinedButton(
                 onClick = {
                     store.clear()
+                    endpoints.clear()
+                    profileFilters.clear()
+                    appliedId = null
                     connected = false
                     email = null
                 },

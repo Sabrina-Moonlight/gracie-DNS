@@ -424,4 +424,16 @@
     <string name="controld_error_other">ControlD respondió algo inesperado.</string>
     <string name="controld_provider_row">Cuenta de ControlD</string>
     <string name="controld_provider_row_desc">Iniciar sesión con un token de API</string>
+    <string name="controld_endpoints_title">Tus dispositivos</string>
+    <string name="controld_endpoints_help">Toca un dispositivo para usar su dirección como tu DNS.</string>
+    <string name="controld_endpoints_error">No se pudieron cargar tus dispositivos.</string>
+    <string name="controld_endpoints_empty">No hay dispositivos en tu cuenta.</string>
+    <string name="controld_endpoint_no_host">Sin dirección DNS disponible</string>
+    <string name="controld_endpoint_applied">En uso</string>
+    <string name="controld_filters_active">Filtros activos:</string>
+    <string name="controld_filters_none">Sin filtros activos</string>
+    <string name="controld_filters_error">No se pudieron cargar los filtros</string>
+    <string name="controld_filters_edit">Editar filtros</string>
+    <string name="controld_filters_done">Listo</string>
+    <string name="controld_filter_change_error">No se pudo cambiar el filtro. Revisa que tu token tenga permiso de escritura.</string>
 </resources>

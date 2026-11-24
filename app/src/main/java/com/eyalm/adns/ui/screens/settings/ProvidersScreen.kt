@@ -260,8 +260,10 @@ fun ProvidersScreen(
                         }
                         itemsIndexed(savedDns.toList(), key = { _, host -> "saved_$host" }) { index, host ->
                             val selected = (currentSelection as? DnsProviderSelection.Custom)?.hostname == host
+                            val savedName = SavedCustomDnsStore.getName(context, host)
                             ResourceSettingRow(
-                                title = host,
+                                title = savedName ?: host,
+                                description = if (savedName != null) host else null,
                                 selected = selected,
                                 position = segmentPosition(index, savedDns.size),
                                 onClick = { viewModel.setProvider(DnsProviderSelection.Custom(host)) },

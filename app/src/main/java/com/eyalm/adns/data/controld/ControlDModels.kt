@@ -11,6 +11,13 @@ data class ControlDProfile(
     val name: String,
 )
 
+/** Filtro de un perfil de ControlD, activado o no. */
+data class ControlDFilter(
+    val id: String,
+    val name: String,
+    val enabled: Boolean,
+)
+
 /**
  * Endpoint (dispositivo) de ControlD. Es el que tiene la dirección DNS propia
  * y el que aplica un perfil. Para usarlo como DNS privado de Android se usa [dotHost].

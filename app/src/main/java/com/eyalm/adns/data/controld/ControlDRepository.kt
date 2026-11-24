@@ -62,6 +62,31 @@ class ControlDRepository(
     suspend fun getEndpoints(): ControlDResult<List<ControlDEndpoint>> =
         call(api::devices) { body -> body.objects("devices").mapNotNull(::parseEndpoint) }
 
+    /** Todos los filtros de un perfil (los propios de ControlD y los de terceros), activados o no. */
+    suspend fun getFilters(profileId: String): ControlDResult<List<ControlDFilter>> {
+        val native = call({ api.profileFilters(profileId) }) { body -> parseFilters(body) }
+        if (native is ControlDResult.Failure) return native
+        val external = call({ api.profileExternalFilters(profileId) }) { body -> parseFilters(body) }
+        val extra = (external as? ControlDResult.Success)?.value.orEmpty()
+        return ControlDResult.Success((native as ControlDResult.Success).value + extra)
+    }
+
+    /** Activa o desactiva un filtro. Necesita un token con permiso de escritura. */
+    suspend fun setFilterEnabled(
+        profileId: String,
+        filterId: String,
+        enabled: Boolean,
+    ): ControlDResult<Unit> =
+        call({ api.setFilter(profileId, filterId, if (enabled) 1 else 0) }) { }
+
+    private fun parseFilters(body: JsonObject): List<ControlDFilter> =
+        body.objects("filters").mapNotNull { item ->
+            val id = item.str("PK") ?: return@mapNotNull null
+            val raw = item.str("status")
+            val enabled = raw == "true" || (raw?.toDoubleOrNull() ?: 0.0) > 0.0
+            ControlDFilter(id = id, name = item.str("name") ?: item.str("title") ?: id, enabled = enabled)
+        }
+
     private fun parseEndpoint(item: JsonObject): ControlDEndpoint? {
         val id = item.str("PK") ?: item.str("device_id") ?: return null
         val profile = item.obj("profile")
