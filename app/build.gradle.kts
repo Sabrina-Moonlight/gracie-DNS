@@ -1,0 +1,119 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
+}
+
+android {
+    namespace = "com.eyalm.adns"
+    compileSdk {
+        version = release(36) {
+            minorApiLevel = 1
+        }
+    }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("normal") {
+            dimension = "version"
+            buildConfigField("Boolean", "IS_FOSS", "false")
+        }
+        create("foss") {
+            dimension = "version"
+            buildConfigField("Boolean", "IS_FOSS", "true")
+        }
+    }
+
+
+    buildFeatures {
+        aidl = true
+        buildConfig = true
+        compose = true
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+    
+    defaultConfig {
+        applicationId = "com.eyalm.adns"
+        minSdk = 27
+        targetSdk = 36
+        versionCode = 23
+        versionName = "2.1.9"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            isMinifyEnabled = false
+            applicationIdSuffix = ".debug"
+        }
+        release {
+            signingConfig = signingConfigs.getByName("debug")
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.appcompat)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.core)
+    implementation(libs.androidx.compose.material.icons.extended)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.compose.animation)
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    testImplementation("com.squareup.okhttp3:mockwebserver:5.4.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.11.0")
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    val shizuku_version = "13.1.5"
+    implementation("dev.rikka.shizuku:api:${shizuku_version}")
+    implementation("dev.rikka.shizuku:provider:${shizuku_version}")
+    implementation("androidx.compose.material3:material3:1.5.0-alpha16")
+    implementation(libs.androidx.graphics.shapes)
+    implementation("androidx.core:core-splashscreen:1.2.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.11.0")
+    implementation("com.squareup.okhttp3:okhttp:5.4.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
+    implementation("com.squareup.retrofit2:retrofit:3.0.0")
+    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+    implementation("com.google.crypto.tink:tink-android:1.22.0")
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    compilerOptions {
+        freeCompilerArgs.add("-Xno-source-debug-extension")
+    }
+}
+

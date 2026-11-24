@@ -1,0 +1,38 @@
+{
+  "setup": {
+    "guide": {
+      "platforms": {
+        "windows": {
+          "guides": {
+            "dns-over-https": {
+              "steps": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          }
+        },
+        "chromeos": {
+          "guides": {
+            "secure-dns": {
+              "steps": [
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
