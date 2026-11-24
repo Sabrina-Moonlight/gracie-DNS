@@ -44,12 +44,19 @@ jobs:
       - name: Build Gracie DNS Release APK
         run: ./gradlew assembleFossRelease --no-configuration-cache --console=plain --warning-mode summary -x lint
 
-      - name: Show APK signing fingerprint
+      - name: Verify APK is signed with the secret key
         run: |
           APKSIGNER=$(ls $ANDROID_HOME/build-tools/*/apksigner | sort -V | tail -n 1)
+          KS=$(keytool -list -v -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey | grep "SHA256:" | head -n 1 | sed 's/.*SHA256: *//' | tr -d ':' | tr 'A-F' 'a-f')
           for f in app/build/outputs/apk/foss/release/*.apk; do
-            "$APKSIGNER" verify --print-certs "$f" | grep -i "SHA-256" | tee -a "$GITHUB_STEP_SUMMARY"
-          done || true
+            APK=$("$APKSIGNER" verify --print-certs "$f" | grep "certificate SHA-256 digest" | head -n 1 | sed 's/.*: *//' | tr -d ':' | tr 'A-F' 'a-f')
+            echo "Llave del secret: $KS" | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "Llave del APK:    $APK" | tee -a "$GITHUB_STEP_SUMMARY"
+            if [ -z "$APK" ] || [ "$KS" != "$APK" ]; then
+              echo "::error::El APK NO quedo firmado con la llave del secret DEBUG_KEYSTORE_BASE64."
+              exit 1
+            fi
+          done
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
