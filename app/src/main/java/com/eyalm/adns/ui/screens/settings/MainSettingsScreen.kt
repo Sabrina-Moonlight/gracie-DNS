@@ -283,47 +283,6 @@ fun MainSettingsScreen(
 
 
             item {
-                Card(
-                    shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainer),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 8.dp),
-                    onClick = {
-                        val url = "https://adns.eyalm.dev"
-                        val intent = Intent(Intent.ACTION_VIEW, url.toUri())
-                        try {
-                            context.startActivity(intent)
-                        } catch (e: ActivityNotFoundException) {
-                            Log.e("Settings", "No browser found to open GitHub URL", e)
-                        }
-                    }
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(24.dp)
-                    ) {
-                        Icon(
-                            painter = painterResource(id = R.drawable.ic_adns_filled),
-                            contentDescription = stringResource(R.string.app_icon),
-                            tint = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier
-                                .align(Alignment.CenterHorizontally)
-                                .size(64.dp)
-                        )
-
-                        Text(
-                            modifier = Modifier
-                                .align(Alignment.CenterHorizontally)
-                                .padding(top = 12.dp, bottom = 4.dp),
-                            text = stringResource(R.string.app_name),
-                            fontWeight = FontWeight.Bold,
-                            style = MaterialTheme.typography.titleMedium,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                    }
-                }
                 Spacer(modifier = Modifier.height(32.dp))
             }
         }

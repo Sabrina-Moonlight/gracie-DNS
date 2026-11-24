@@ -45,10 +45,23 @@ android {
         applicationId = "com.gracie.dns"
         minSdk = 27
         targetSdk = 36
-        versionCode = 23
-        versionName = "2.1.9"
+        versionCode = 24
+        versionName = "3.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Firma siempre con la llave que el workflow escribe en ~/.android/debug.keystore (ruta fija, sin depender del sistema).
+    signingConfigs {
+        getByName("debug") {
+            val llave = File(System.getProperty("user.home"), ".android/debug.keystore")
+            if (llave.exists()) {
+                storeFile = llave
+                storePassword = "android"
+                keyAlias = "androiddebugkey"
+                keyPassword = "android"
+            }
+        }
     }
 
     buildTypes {
