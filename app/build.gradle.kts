@@ -42,7 +42,7 @@ android {
     }
     
     defaultConfig {
-        applicationId = "com.eyalm.adns"
+        applicationId = "com.gracie.dns"
         minSdk = 27
         targetSdk = 36
         versionCode = 23

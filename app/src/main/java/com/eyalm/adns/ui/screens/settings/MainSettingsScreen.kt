@@ -64,7 +64,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.eyalm.adns.BuildConfig
 import com.eyalm.adns.R
 import com.eyalm.adns.data.AppRuntimeRepositories
 import com.eyalm.adns.data.dns.DnsDisableBehavior
@@ -322,13 +321,6 @@ fun MainSettingsScreen(
                             fontWeight = FontWeight.Bold,
                             style = MaterialTheme.typography.titleMedium,
                             color = MaterialTheme.colorScheme.onSurface
-                        )
-                        Text(
-                            text = stringResource(R.string.version_ncreated_by_eyal_meirom, BuildConfig.VERSION_NAME),
-                            modifier = Modifier.align(Alignment.CenterHorizontally),
-                            textAlign = TextAlign.Center,
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 }

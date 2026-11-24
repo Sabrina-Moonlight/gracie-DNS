@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">ADNS</string>
+    <string name="app_name" translatable="false">Gracie\'s DNS</string>
     <string name="a_dnsbased_ad_blocker_for_android">Private DNS Supercharged</string>
     <string name="activation">Activation</string>
     <string name="adb_shell">ADB Shell</string>
@@ -389,7 +389,7 @@
     <string name="nextdns_connection_offline">Connection check unavailable offline</string>
     <string name="nextdns_connection_offline_description">Connect to a network and refresh to check this device.</string>
     <string name="nextdns_unknown_resolver">an unknown resolver</string>
-    <string name="adb_grant_command" translatable="false">adb shell pm grant com.eyalm.adns android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="adb_grant_command" translatable="false">adb shell pm grant com.gracie.dns android.permission.WRITE_SECURE_SETTINGS</string>
     <string name="block_domain">Block Domain</string>
     <string name="allow_domain">Allow Domain</string>
     <string name="resolved">Resolved</string>
