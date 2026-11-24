@@ -432,4 +432,20 @@
     <string name="unreleased_warning_title">Unreleased Feature</string>
     <string name="unreleased_warning_description">This setting is an experimental internal feature not yet officially launched by NextDNS. Enabling it may cause unexpected website breakage, high false positives, or DNS resolution failures. NextDNS may alter or remove it at any time.</string>
     <string name="unreleased_warning_enable">I Understand the Risks, Enable</string>
+    <string name="saved_dns_servers">Saved DNS servers</string>
+    <string name="delete_saved_dns">Delete saved DNS</string>
+    <string name="controld_title">ControlD</string>
+    <string name="controld_back">Back</string>
+    <string name="controld_connected">Connected to ControlD</string>
+    <string name="controld_sign_out">Sign out</string>
+    <string name="controld_token_help">Paste your ControlD API token. You can create one at controld.com/dashboard/api (the "Read" permission is enough).</string>
+    <string name="controld_token_label">API token</string>
+    <string name="controld_check_and_save">Check and save</string>
+    <string name="controld_checking">Checking…</string>
+    <string name="controld_error_invalid">The token is not valid.</string>
+    <string name="controld_error_forbidden">The token has no permission or its IP is not allowed.</string>
+    <string name="controld_error_network">No connection. Try again.</string>
+    <string name="controld_error_other">ControlD returned an unexpected response.</string>
+    <string name="controld_provider_row">ControlD account</string>
+    <string name="controld_provider_row_desc">Sign in with an API token</string>
 </resources>

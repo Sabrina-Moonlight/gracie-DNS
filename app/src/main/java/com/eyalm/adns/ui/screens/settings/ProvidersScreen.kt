@@ -25,7 +25,16 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Icon
+import androidx.compose.material3.RadioButton
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.ui.platform.LocalContext
+import com.eyalm.adns.data.provider.SavedCustomDnsStore
+import com.eyalm.adns.ui.components.ResourceSettingRow
+import com.eyalm.adns.ui.components.SegmentPosition
+import com.eyalm.adns.ui.components.segmentPosition
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -70,6 +79,16 @@ fun ProvidersScreen(
     val currentSelection by viewModel.selectedProvider.collectAsState()
     val catalog = remember { DnsProviderCatalog.default }
     val listState = rememberLazyListState()
+    val context = LocalContext.current
+    val savedDns = remember { mutableStateListOf<String>().apply { addAll(SavedCustomDnsStore.list(context)) } }
+    LaunchedEffect(currentSelection) {
+        (currentSelection as? DnsProviderSelection.Custom)?.hostname?.let { host ->
+            if (host !in savedDns) {
+                savedDns.clear()
+                savedDns.addAll(SavedCustomDnsStore.add(context, host))
+            }
+        }
+    }
     val isKeyboardVisible = WindowInsets.isImeVisible
     var isCustomSelected by remember(currentSelection) {
         mutableStateOf(currentSelection is DnsProviderSelection.Custom)
@@ -203,6 +222,8 @@ fun ProvidersScreen(
                         onCustomClick = { isCustomSelected = true },
                         onCustomConfirm = {
                             normalizedCustomHostname?.let { hostname ->
+                                savedDns.clear()
+                                savedDns.addAll(SavedCustomDnsStore.add(context, hostname))
                                 viewModel.setProvider(
                                     DnsProviderSelection.Custom(hostname)
                                 )
@@ -211,6 +232,54 @@ fun ProvidersScreen(
                         },
                         isCustomHostnameValid = normalizedCustomHostname != null,
                     )
+
+                    item(key = "controld_account") {
+                        ResourceSettingRow(
+                            title = stringResource(R.string.controld_provider_row),
+                            description = stringResource(R.string.controld_provider_row_desc),
+                            selected = false,
+                            position = segmentPosition(0, 1),
+                            onClick = {
+                                context.startActivity(
+                                    android.content.Intent(
+                                        context,
+                                        com.eyalm.adns.ControlDLoginActivity::class.java,
+                                    )
+                                )
+                            },
+                        )
+                    }
+
+                    if (savedDns.isNotEmpty()) {
+                        item(key = "saved_dns_header") {
+                            Text(
+                                text = stringResource(R.string.saved_dns_servers),
+                                style = MaterialTheme.typography.titleMedium,
+                                modifier = Modifier.padding(top = 20.dp, bottom = 8.dp),
+                            )
+                        }
+                        itemsIndexed(savedDns.toList(), key = { _, host -> "saved_$host" }) { index, host ->
+                            val selected = (currentSelection as? DnsProviderSelection.Custom)?.hostname == host
+                            ResourceSettingRow(
+                                title = host,
+                                selected = selected,
+                                position = segmentPosition(index, savedDns.size),
+                                onClick = { viewModel.setProvider(DnsProviderSelection.Custom(host)) },
+                                leading = { RadioButton(selected = selected, onClick = null) },
+                                trailing = {
+                                    IconButton(onClick = {
+                                        savedDns.clear()
+                                        savedDns.addAll(SavedCustomDnsStore.remove(context, host))
+                                    }) {
+                                        Icon(
+                                            imageVector = Icons.Default.Delete,
+                                            contentDescription = stringResource(R.string.delete_saved_dns),
+                                        )
+                                    }
+                                },
+                            )
+                        }
+                    }
                 }
             }
         }
