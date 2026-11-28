@@ -16,7 +16,7 @@
     <string name="api_key_account">ଏପିଆଇ କୁଞ୍ଜୀ</string>
     <string name="app_settings">ଆପ୍ ସେଟିଂସ୍</string>
     <string name="application_activated_successfully">ଆପ୍ଲିକେସନ୍ ସଫଳତାର ସହ ସକ୍ରିୟ ହୋଇଛି</string>
-    <string name="blocked">%1$s (%2$s%) ଅବରୋଧ କରାଯାଇଛି</string>
+    <string name="blocked">%1$s (%2$s%%) ଅବରୋଧ କରାଯାଇଛି</string>
     <string name="blockerndisabled">ଅବରୋଧକ\nଅକ୍ଷମ କରାଯାଇଛି</string>
     <string name="blocklists_trackers_affiliate_links">ବ୍ଲକଲିଷ୍ଟ, ଟ୍ରାକର, ଜଡ଼ିତ ଲିଙ୍କ୍</string>
     <string name="cannot_load_stats">ପରିସଂଖ୍ୟାନ ଲୋଡ୍ କରାଯାଇପାରିବ ନାହିଁ</string>

@@ -14,7 +14,7 @@
     <string name="api_key_account">حساب مفتاح API</string>
     <string name="app_settings">إعدادات التطبيق</string>
     <string name="application_activated_successfully">تم تفعيل التطبيق بنجاح</string>
-    <string name="blocked">تم حظر %1$s (%2$s%)</string>
+    <string name="blocked">تم حظر %1$s (%2$s%%)</string>
     <string name="blockerndisabled">مانع\nمعطل</string>
     <string name="blocklists_trackers_affiliate_links">قوائم الحظر، أدوات التتبع، روابط التسويق بالعمولة</string>
     <string name="cannot_load_stats">لا يمكن تحميل الإحصائيات</string>

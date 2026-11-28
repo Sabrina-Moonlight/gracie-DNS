@@ -159,6 +159,8 @@ fun ProvidersScreen(
                 showAppBarTitle = false,
                 modifier = modifier.fillMaxSize(),
             ) { innerPadding ->
+                val controlDTitleText = stringResource(R.string.controld_provider_row)
+                val controlDDescText = stringResource(R.string.controld_provider_row_desc)
                 LazyColumn(
                     state = listState,
                     modifier = Modifier
@@ -225,8 +227,8 @@ fun ProvidersScreen(
                             }
                         },
                         isCustomHostnameValid = normalizedCustomHostname != null,
-                        controlDTitle = stringResource(R.string.controld_provider_row),
-                        controlDDescription = stringResource(R.string.controld_provider_row_desc),
+                        controlDTitle = controlDTitleText,
+                        controlDDescription = controlDDescText,
                         onControlDClick = {
                             context.startActivity(
                                 android.content.Intent(
