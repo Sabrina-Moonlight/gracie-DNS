@@ -16,11 +16,9 @@
     <string name="api_key_account">Compte de la clé API</string>
     <string name="app_settings">PARAMÈTRES APPLICATION</string>
     <string name="application_activated_successfully">Application activée avec succès.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Outrepasser automatiquement les contrôles de vérification d\'âge utilisés par certains sites web, tels que les sites pour adultes, pour vérifier l\'âge du visiteur avant d\'autoriser l\'accès.</string>
     <string name="blocked">%1$s (%2$s%%) bloqués</string>
     <string name="blockerndisabled">Bloqueur\ndésactivé</string>
     <string name="blocklists_trackers_affiliate_links">Listes de blocage, traqueurs, liens affiliés</string>
-    <string name="bypass_age_verification">Contourner la vérification d\'âge</string>
     <string name="cannot_load_stats">Impossible de charger les stats</string>
     <string name="change_account_settings_for">Gérer les profils, les déconnexions</string>
     <string name="change_provider">Changer de fournisseur</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">Le nom de l\'appareil n\'est pas défini</string>
     <string name="disable_blocker">Désactiver les DNS</string>
     <string name="done">Fait !</string>
-    <string name="download">Télécharger</string>
     <string name="email">E-mail</string>
     <string name="enable_blocker">Activer les DNS</string>
     <string name="enable_or_disable_blocker_state_notifications">Activer ou désactiver les notifications d\'état</string>
-    <string name="enhanced">" (amélioré)"</string>
     <string name="enter_a_domain">Entrez un domaine…</string>
     <string name="enter_a_hostname">Entrez un hôte…</string>
     <string name="failed_to_add">Échec de l\'ajout de %1$s</string>
@@ -71,7 +67,6 @@
     <string name="logs_performance_block_page">Performances, réécritures, accès</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Erreur réseau. Veuillez réessayer.</string>
-    <string name="new_update">Nouvelle mise à jour</string>
     <string name="next">Suivant</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">PARAMÈTRES DU PROFIL NEXTDNS</string>
@@ -114,13 +109,11 @@
     <string name="tile_added">Tuile ajoutée !</string>
     <string name="the_public_google_dns_server">Le serveur DNS public Google.</string>
     <string name="the_public_adguard_dns_server_blocks_ads_and_trackers">Le serveur DNS public AdGuard.</string>
-    <string name="version_ncreated_by_eyal_meirom">Version %1$s\n\nCréé par Eyal Meirom</string>
     <string name="uptime">Temps de disponibilité</string>
     <string name="unknown_error">Erreur inconnue</string>
     <string name="your_dns_settings_have_been_updated">Vos paramètres DNS ont été mis à jour.</string>
     <string name="waiting_for_permission">En attente d\'autorisation…</string>
     <string name="youre_almost_there">Vous y êtes presque !</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">La version v%1$s est disponible.\n\nSouhaitez-vous la télécharger ?</string>
     <string name="language">Langue</string>
     <string name="help_translate_adns_description">Proposez des traductions ou améliorez une langue existante sur Weblate.</string>
     <string name="home">Accueil</string>
@@ -132,7 +125,6 @@
     <string name="blocked_only">Uniquement les éléments bloqués</string>
     <string name="change_blocklist_sort_order">Modifier l\'ordre des listes de blocage</string>
     <string name="sort_by">Trier par</string>
-    <string name="view_your_dns_logs">Afficher et rechercher vos journaux DNS</string>
     <string name="enabled_only">Uniquement les éléments activés</string>
     <string name="lists">LISTES</string>
     <string name="preferences">PRÉFÉRENCES</string>
@@ -347,7 +339,6 @@
     <string name="wifi_background_location_description">Autorisez l\'accès à la localisation en permanence afin qu\'Android puisse redémarrer automatiquement les règles Wi-Fi après le redémarrage de l\'appareil. ADNS se contente de lire le nom du réseau Wi-Fi connecté.</string>
     <string name="settings_status_header">ÉTAT</string>
     <string name="wifi_battery_optimization_description">L\'optimisation de la batterie peut interrompre la surveillance du Wi-Fi. Vous pouvez vérifier les paramètres système, mais il ne s\'agit pas d\'une autorisation de localisation.</string>
-    <string name="app_icon">Icône de l\'application</string>
     <string name="toggling_settings">PARAMÈTRES DE COMMUTATION</string>
     <string name="appearance">Apparence</string>
     <string name="appearance_description">Choisissez l\'apparence d\'ADNS sur cet appareil</string>
@@ -402,7 +393,6 @@
     <string name="hagezi_dns">DNS HaGeZi</string>
     <string name="location">Localisation</string>
     <string name="isp">FAI</string>
-    <string name="country">Pays</string>
     <string name="country_code">Indicatif pays</string>
     <string name="network">Réseau</string>
     <string name="cellular">Réseau mobile</string>

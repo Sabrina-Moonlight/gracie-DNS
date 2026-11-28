@@ -16,11 +16,9 @@
     <string name="api_key_account">Сметка со API клуч</string>
     <string name="app_settings">ПОСТАВКИ НА АПЛИКАЦИЈАТА</string>
     <string name="application_activated_successfully">Апликацијата е успешно активирана.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Автоматски заобиколувај ги проверките за верификација на возраста што ги користат одредени веб-страници, како што се страниците за содржина за возрасни, за да ја потврдат возраста на посетителот пред да му дозволат пристап.</string>
     <string name="blocked">%1$s (%2$s%%) блокирани</string>
     <string name="blockerndisabled">Блокаторот\nе оневозможен</string>
     <string name="blocklists_trackers_affiliate_links">Листа на блокирани, трекер, афилиејт линкови</string>
-    <string name="bypass_age_verification">Заобиколување на проверка на возраст</string>
     <string name="cannot_load_stats">Не може да се вчитаат статистиките</string>
     <string name="change_account_settings_for">Управувај со профили, одјави се</string>
     <string name="change_provider">Промени провајдер</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">Името на уредот не е поставено</string>
     <string name="disable_blocker">Оневозможи DNS</string>
     <string name="done">Готово!</string>
-    <string name="download">Преземи</string>
     <string name="email">Е-пошта</string>
     <string name="enable_blocker">Овозможи DNS</string>
     <string name="enable_or_disable_blocker_state_notifications">Овозможи или оневозможи известувања за состојбата</string>
-    <string name="enhanced">" (Подобрено)"</string>
     <string name="enter_a_domain">Внесете домен…</string>
     <string name="enter_a_hostname">Внесете име на хост…</string>
     <string name="failed_to_add">Неуспешно додавање %1$s</string>
@@ -74,7 +70,6 @@
     <string name="logs_performance_block_page">Изведба, пренасочувања, пристапи</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Мрежна грешка. Обидете се повторно.</string>
-    <string name="new_update">Ново ажурирање</string>
     <string name="next">Следно</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">ПОСТАВКИ НА NEXTDNS ПРОФИЛОТ</string>
@@ -126,8 +121,6 @@
     <string name="unknown_error">Непозната грешка</string>
     <string name="uptime">Време на работа</string>
     <string name="use_a_custom_hostname_for_the_dns_server">Користи приспособено име на хост за DNS серверот.</string>
-    <string name="version_ncreated_by_eyal_meirom">Верзија %1$s\nСоздадено од Eyal Meirom</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">Достапна е верзија v%1$s.\nСакате ли да ја преземете?</string>
     <string name="waiting_for_permission">Се чека дозвола…</string>
     <string name="welcome_to_adns">Добредојдовте во ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"Можете да создадете на веб-страницата на NextDNS: "</string>
@@ -144,7 +137,6 @@
     <string name="preferences">ПРЕФЕРЕНЦИИ</string>
     <string name="failed_to_load_logs_check_your_connection">Не успеа вчитувањето на логовите. Проверете ја врската.</string>
     <string name="added_to">Додадено %1$s во %2$s</string>
-    <string name="view_your_dns_logs">Прегледувај и пребарувај ги DNS логовите</string>
     <string name="blocked_only">Само блокирани</string>
     <string name="show_only_blocked_items">Прикажи само блокирани ставки</string>
     <string name="enabled_only">Само овозможени</string>
@@ -355,7 +347,6 @@
     <string name="wifi_battery_optimization_description">Оптимизацијата на батеријата може да го прекине следењето на Wi-Fi. Можете да ја прегледате системската поставка, но ова не е дозвола за локација.</string>
     <string name="settings_status_header">СОСТОЈБА</string>
     <string name="toggling_settings">ПОСТАВКИ ЗА ПРЕФРЛУВАЊЕ</string>
-    <string name="app_icon">Икона на апликацијата</string>
     <string name="appearance">Изглед</string>
     <string name="appearance_description">Изберете како изгледа ADNS на овој уред</string>
     <string name="theme_system_default">Системски стандард</string>
@@ -391,7 +382,6 @@
     <string name="percentage">Процент</string>
     <string name="location">Локација</string>
     <string name="isp">ISP</string>
-    <string name="country">Земја</string>
     <string name="country_code">Код на земја</string>
     <string name="network">Мрежа</string>
     <string name="cellular">Мобилна</string>

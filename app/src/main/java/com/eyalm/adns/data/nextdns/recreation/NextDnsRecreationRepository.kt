@@ -5,8 +5,6 @@ import com.eyalm.adns.data.nextdns.api.NextDnsApi
 import com.eyalm.adns.data.nextdns.api.nextDnsApiCall
 import com.eyalm.adns.data.nextdns.api.toEmptyApiResult
 import com.eyalm.adns.data.nextdns.api.toJsonApiResult
-import com.eyalm.adns.data.nextdns.api.toHexId
-import com.eyalm.adns.data.nextdns.resources.UpdateParentalResourceRequest
 import com.eyalm.adns.domain.nextdns.ApiResult
 import com.google.gson.Gson
 
@@ -42,20 +40,6 @@ class NextDnsRecreationRepository(
         api.updateRecreationSchedule(
             profileId,
             UpdateRecreationScheduleRequest(schedule),
-        ).toEmptyApiResult()
-    }
-
-    suspend fun updateItem(
-        profileId: String,
-        collection: RecreationItemCollection,
-        itemId: String,
-        recreation: Boolean,
-    ): ApiResult<Unit> = nextDnsApiCall {
-        api.updateParentalResource(
-            profileId = profileId,
-            collection = collection.wireName,
-            hexId = itemId.toHexId(),
-            request = UpdateParentalResourceRequest(recreation = recreation),
         ).toEmptyApiResult()
     }
 }

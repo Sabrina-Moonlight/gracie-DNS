@@ -15,11 +15,9 @@
     <string name="api_key_account">API Klucz Konta</string>
     <string name="app_settings">Ustawienia Aplikacji</string>
     <string name="application_activated_successfully">Aplikacja została pomyślnie aktywowana.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Automatycznie omijaj wiek kontrole weryfikacyjne stosowane na niektórych stronach internetowych, takich jak strony z treściami dla dorosłych, w celu sprawdzenia wieku odwiedzającego przed udzieleniem mu dostępu.</string>
     <string name="blocked">%1$s (%2$s%%) zablokowano</string>
     <string name="blockerndisabled">Bloker\nWyłączony</string>
     <string name="blocklists_trackers_affiliate_links">Listy blokowania, trackery, linki afiliacyjne</string>
-    <string name="bypass_age_verification">Pomiń weryfikację wieku</string>
     <string name="cannot_load_stats">Nie można wczytać statystyk</string>
     <string name="change_account_settings_for">Zarządzaj profilami, wyloguj się</string>
     <string name="change_provider">Zmień dostawcę</string>
@@ -39,7 +37,6 @@
     <string name="device_name_is_not_set">Nazwa urządzenia nie jest ustawiona</string>
     <string name="disable_blocker">Wyłącz DNS</string>
     <string name="done">Gotowe!</string>
-    <string name="download">Pobierz</string>
     <string name="email">Email</string>
     <string name="enable_blocker">Włącz DNS</string>
     <string name="enable_or_disable_blocker_state_notifications">Włącz lub wyłącz stan powiadomienia</string>
@@ -72,7 +69,6 @@
     <string name="logs_performance_block_page">Wydajność, przepisywanie, dostęp</string>
     <string name="mynextdnsioaccount">my.nextdns.io/konto</string>
     <string name="network_error_please_try_again">Błąd sieci. Spróbuj ponownie.</string>
-    <string name="new_update">Nowa aktualizacja</string>
     <string name="next">Nastepny</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">USTAWIENIA PROFILU NEXTDNS</string>
@@ -110,8 +106,6 @@
     <string name="unknown_error">Nieznany błąd</string>
     <string name="uptime">Czas pracy</string>
     <string name="use_a_custom_hostname_for_the_dns_server">Użyj niestandardowej nazwy hosta dla serwera DNS.</string>
-    <string name="version_ncreated_by_eyal_meirom">Wersja %1$s\nStworzone przez Eyala Meiroma</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">Dostępna jest wersja v%1$s.\nCzy chcesz pobrać?</string>
     <string name="waiting_for_permission">Czekam na pozwolenie…</string>
     <string name="welcome_to_adns">Witaj w ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"Możesz utworzyć go w NextDNS strona internetowa: "</string>
@@ -127,7 +121,6 @@
     <string name="preferences">PREFERENCJE</string>
     <string name="failed_to_load_logs_check_your_connection">Nie udało się załadować logów. Sprawdź połączenie.</string>
     <string name="added_to">Dodano %1$s do %2$s</string>
-    <string name="view_your_dns_logs">Przeglądaj i przeszukuj logi DNS</string>
     <string name="blocked_only">Tylko zablokowane</string>
     <string name="show_only_blocked_items">Pokaż tylko zablokowane elementy</string>
     <string name="enabled_only">Tylko włączone</string>
@@ -336,7 +329,6 @@
     <string name="wifi_battery_optimization_description">Optymalizacja baterii może zakłócić monitorowanie Wi-Fi. Możesz sprawdzić ustawienia systemowe, ale nie jest to uprawnienie do dostępu do lokalizacji.</string>
     <string name="settings_status_header">STATUS</string>
     <string name="toggling_settings">PRZEŁĄCZANIE USTAWIEŃ</string>
-    <string name="app_icon">Ikona aplikacji</string>
     <string name="appearance">Wygląd</string>
     <string name="appearance_description">Wybierz wygląd ADNS na tym urządzeniu</string>
     <string name="theme_system_default">Domyślne systemowe</string>
@@ -361,7 +353,6 @@
     <string name="query_type_label">Typ zapytania</string>
     <string name="just_now">właśnie</string>
     <string name="a_dnsbased_ad_blocker_for_android">Prywatny DNS w wersji super</string>
-    <string name="enhanced">" (Wzmocniony)"</string>
     <string name="not_running">Nie działa</string>
     <string name="state_notifications">Stan Powiadomienia</string>
     <string name="tile_added">Kafelek dodany!</string>
@@ -393,7 +384,6 @@
     <string name="percentage">Procent</string>
     <string name="location">Lokalizacja</string>
     <string name="isp">ISP</string>
-    <string name="country">Kraj</string>
     <string name="country_code">Kod kraju</string>
     <string name="network">Sieć</string>
     <string name="cellular">Komórkowy</string>

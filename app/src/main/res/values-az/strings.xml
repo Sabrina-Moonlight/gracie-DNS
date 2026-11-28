@@ -16,11 +16,9 @@
     <string name="api_key_account">API Açar Hesabı</string>
     <string name="app_settings">TƏTBİQ AYARLARI</string>
     <string name="application_activated_successfully">Tətbiq uğurla aktivləşdirildi.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Girişə icazə verməzdən əvvəl ziyarətçinin yaşını təsdiqləmək üçün yetkin məzmun saytları kimi müəyyən veb saytlar tərəfindən istifadə edilən yaş yoxlamalarını avtomatik olaraq keçin.</string>
     <string name="blocked">%1$s (%2$s%%) bloklandı</string>
     <string name="blockerndisabled">Bloker\nDeaktiv edilib</string>
     <string name="blocklists_trackers_affiliate_links">Blok siyahıları, izləyicilər, filial linkləri</string>
-    <string name="bypass_age_verification">Bypass Yaş Təsdiqi</string>
     <string name="cannot_load_stats">Statistika yüklənə bilmir</string>
     <string name="change_account_settings_for">Profilləri idarə edin, çıxış edin</string>
     <string name="change_provider">Provayderi dəyişdirin</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">Cihaz Adı təyin edilməyib</string>
     <string name="disable_blocker">DNS deaktiv edin</string>
     <string name="done">Hazırdır!</string>
-    <string name="download">Yükləyin</string>
     <string name="email">E-poçt</string>
     <string name="enable_blocker">DNS aktivləşdirin</string>
     <string name="enable_or_disable_blocker_state_notifications">Vəziyyət bildirişlərini aktivləşdirin və ya deaktiv edin</string>
-    <string name="enhanced">" (Təkmilləşdirilmiş)"</string>
     <string name="enter_a_domain">Domen daxil edin…</string>
     <string name="enter_a_hostname">Host adı daxil edin…</string>
     <string name="failed_to_add">%1$s əlavə etmək alınmadı</string>
@@ -71,7 +67,6 @@
     <string name="logs_performance_block_page">Məhsuldarlıq, yenidən yazma, giriş</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Şəbəkə xətası. Zəhmət olmasa, yenidən cəhd edin.</string>
-    <string name="new_update">Yeni Yeniləmə</string>
     <string name="next">Növbəti</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">NEXTDNS PROFİL AYARLARI</string>
@@ -113,8 +108,6 @@
     <string name="unknown_error">Naməlum xəta</string>
     <string name="uptime">İş vaxtı</string>
     <string name="use_a_custom_hostname_for_the_dns_server">DNS serveri üçün xüsusi host adı istifadə edin.</string>
-    <string name="version_ncreated_by_eyal_meirom">Versiya %1$s\nEyal Meirom tərəfindən yaradılıb</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">v%1$s versiyası mövcuddur.\nOnu yükləmək istərdinizmi?</string>
     <string name="waiting_for_permission">İcazə gözlənilir…</string>
     <string name="welcome_to_adns">ADNS-ə xoş gəlmisiniz</string>
     <string name="you_can_create_one_at_the_nextdns_website">"NextDNS veb saytında birini yarada bilərsiniz: "</string>
@@ -131,7 +124,6 @@
     <string name="preferences">TƏRCİHLƏR</string>
     <string name="failed_to_load_logs_check_your_connection">Jurnalları yükləmək alınmadı. Bağlantınızı yoxlayın.</string>
     <string name="added_to">%1$s %2$s-ə əlavə edildi</string>
-    <string name="view_your_dns_logs">DNS loglarınıza baxın və axtarış aparın</string>
     <string name="blocked_only">Yalnız bloklanıb</string>
     <string name="show_only_blocked_items">Yalnız bloklanmış elementləri göstər</string>
     <string name="enabled_only">Yalnız aktivdir</string>
@@ -345,7 +337,6 @@
     <string name="wifi_battery_optimization_description">Batareya optimallaşdırılması Wi-Fi monitorinqini dayandıra bilər. Sistem ayarlarını nəzərdən keçirə bilərsiniz, lakin bu, yer icazəsi deyil.</string>
     <string name="settings_status_header">STATUS</string>
     <string name="toggling_settings">AYARLARI DƏYİŞDİRİR</string>
-    <string name="app_icon">Tətbiq ikonası</string>
     <string name="appearance">Görünüş</string>
     <string name="appearance_description">ADNS-in bu cihazda necə göründüyünü seçin</string>
     <string name="theme_system_default">Sistem standartı</string>
@@ -393,7 +384,6 @@
     <string name="percentage">Faiz</string>
     <string name="location">Məkan</string>
     <string name="isp">ISP</string>
-    <string name="country">Ölkə</string>
     <string name="country_code">Ölkə kodu</string>
     <string name="network">Şəbəkə</string>
     <string name="cellular">Mobil şəbəkə</string>

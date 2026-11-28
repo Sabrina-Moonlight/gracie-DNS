@@ -16,11 +16,9 @@
     <string name="api_key_account">חשבון מפתח API</string>
     <string name="app_settings">הגדרות אפליקציה</string>
     <string name="application_activated_successfully">האפליקציה הופעלה בהצלחה.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">עקוף באופן אוטומטי בדיקות אימות גיל המשמשות אתרים מסוימים, כגון אתרי תוכן למבוגרים, כדי לאמת את גיל המבקר לפני מתן גישה.</string>
     <string name="blocked">%1$s (%2$s%%) נחסמו</string>
     <string name="blockerndisabled">החוסם\nכבוי</string>
     <string name="blocklists_trackers_affiliate_links">רשימות חסימה, מעקבים, קישורי שותפים</string>
-    <string name="bypass_age_verification">עקיפת אימות גיל</string>
     <string name="cannot_load_stats">לא ניתן לטעון סטטיסטיקה</string>
     <string name="change_account_settings_for">ניהול פרופילים, התנתקות</string>
     <string name="change_provider">שנה ספק</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">שם המכשיר אינו מוגדר</string>
     <string name="disable_blocker">כבה Private DNS</string>
     <string name="done">בוצע!</string>
-    <string name="download">הורדה</string>
     <string name="email">אימייל</string>
     <string name="enable_blocker">הפעל Private DNS</string>
     <string name="enable_or_disable_blocker_state_notifications">הפעל או כבה התראות מצב</string>
-    <string name="enhanced">" (משופר)"</string>
     <string name="enter_a_domain">הזן דומיין…</string>
     <string name="enter_a_hostname">הזן שם מארח…</string>
     <string name="failed_to_add">הוספת %1$s נכשלה</string>
@@ -74,7 +70,6 @@
     <string name="logs_performance_block_page">ביצועים, שכתובים, גישה</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">שגיאת רשת. נסה שוב.</string>
-    <string name="new_update">עדכון חדש</string>
     <string name="next">הבא</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">הגדרות פרופיל NEXTDNS</string>
@@ -116,8 +111,6 @@
     <string name="unknown_error">שגיאה לא ידועה</string>
     <string name="uptime">זמן פעילות</string>
     <string name="use_a_custom_hostname_for_the_dns_server">השתמש בשם מארח מותאם אישית עבור שרת ה-DNS.</string>
-    <string name="version_ncreated_by_eyal_meirom">גרסה %1$s\nנוצר על ידי אייל מירום</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">גרסה v%1$s זמינה.\nהאם ברצונך להוריד אותה?</string>
     <string name="waiting_for_permission">ממתין להרשאה…</string>
     <string name="welcome_to_adns">ברוכים הבאים ל-ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"תוכל ליצור אחד באתר NextDNS: "</string>
@@ -134,7 +127,6 @@
     <string name="preferences">העדפות</string>
     <string name="failed_to_load_logs_check_your_connection">טעינת הלוגים נכשלה. בדוק את החיבור שלך.</string>
     <string name="added_to">התווסף %1$s ל-%2$s</string>
-    <string name="view_your_dns_logs">הצג וחפש בלוגי ה-DNS שלך</string>
     <string name="blocked_only">חסומים בלבד</string>
     <string name="show_only_blocked_items">הצג פריטים חסומים בלבד</string>
     <string name="enabled_only">פעילים בלבד</string>
@@ -353,7 +345,6 @@
     <string name="wifi_battery_optimization_description">מיטוב סוללה עלול להפריע לניטור ה-Wi-Fi. תוכל לבדוק את הגדרת המערכת, אך זו אינה הרשאת מיקום.</string>
     <string name="settings_status_header">סטטוס</string>
     <string name="toggling_settings">הגדרות מיתוג</string>
-    <string name="app_icon">סמל האפליקציה</string>
     <string name="appearance">מראה</string>
     <string name="appearance_description">בחר כיצד ADNS תיראה במכשיר זה</string>
     <string name="theme_system_default">ברירת מחדל של המערכת</string>
@@ -394,7 +385,6 @@
     <string name="percentage">אחוז</string>
     <string name="location">מיקום</string>
     <string name="isp">ISP</string>
-    <string name="country">מדינה</string>
     <string name="country_code">קוד מדינה</string>
     <string name="network">רשת</string>
     <string name="cellular">סלולארי</string>

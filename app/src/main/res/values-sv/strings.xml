@@ -16,11 +16,9 @@
     <string name="api_key_account">API-nyckelkonto</string>
     <string name="app_settings">APPINSTÄLLNINGAR</string>
     <string name="application_activated_successfully">Appen har aktiverats.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Kringgå automatiskt åldersverifieringar som vissa webbplatser, till exempel webbplatser med vuxeninnehåll, använder för att bekräfta besökarens ålder innan åtkomst ges.</string>
     <string name="blocked">%1$s (%2$s%%) blockerat</string>
     <string name="blockerndisabled">Blockering\ninaktiverad</string>
     <string name="blocklists_trackers_affiliate_links">Blockeringslistor, spårare, affiliatelänkar</string>
-    <string name="bypass_age_verification">Kringgå åldersverifiering</string>
     <string name="cannot_load_stats">Kunde inte läsa in statistik</string>
     <string name="change_account_settings_for">Hantera profiler, logga ut</string>
     <string name="change_provider">Byt leverantör</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">Enhetsnamn har inte angetts</string>
     <string name="disable_blocker">Inaktivera DNS</string>
     <string name="done">Klar!</string>
-    <string name="download">Hämta</string>
     <string name="email">E-postadress</string>
     <string name="enable_blocker">Aktivera DNS</string>
     <string name="enable_or_disable_blocker_state_notifications">Aktivera eller inaktivera statusaviseringar</string>
-    <string name="enhanced">" (utökad)"</string>
     <string name="enter_a_domain">Ange en domän …</string>
     <string name="enter_a_hostname">Ange ett värdnamn …</string>
     <string name="failed_to_add">Kunde inte lägga till %1$s</string>
@@ -71,7 +67,6 @@
     <string name="logs_performance_block_page">Prestanda, omskrivningar, åtkomst</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Nätverksfel. Försök igen.</string>
-    <string name="new_update">Ny uppdatering</string>
     <string name="next">Nästa</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">NEXTDNS-PROFILINSTÄLLNINGAR</string>
@@ -113,8 +108,6 @@
     <string name="unknown_error">Okänt fel</string>
     <string name="uptime">Drifttid</string>
     <string name="use_a_custom_hostname_for_the_dns_server">Använd ett anpassat värdnamn för DNS-servern.</string>
-    <string name="version_ncreated_by_eyal_meirom">Version %1$s\nSkapad av Eyal Meirom</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">Version v%1$s finns tillgänglig.\nVill du hämta den?</string>
     <string name="waiting_for_permission">Väntar på behörighet …</string>
     <string name="welcome_to_adns">Välkommen till ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"Du kan skapa en på NextDNS webbplats: "</string>
@@ -131,7 +124,6 @@
     <string name="preferences">INSTÄLLNINGAR</string>
     <string name="failed_to_load_logs_check_your_connection">Kunde inte läsa in loggar. Kontrollera anslutningen.</string>
     <string name="added_to">Lade till %1$s i %2$s</string>
-    <string name="view_your_dns_logs">Visa och sök i dina DNS-loggar</string>
     <string name="blocked_only">Endast blockerade</string>
     <string name="show_only_blocked_items">Visa endast blockerade objekt</string>
     <string name="enabled_only">Endast aktiverade</string>
@@ -345,7 +337,6 @@
     <string name="wifi_battery_optimization_description">Batterioptimering kan avbryta Wi-Fi-övervakningen. Du kan granska systeminställningen, men detta är inte en platsbehörighet.</string>
     <string name="settings_status_header">STATUS</string>
     <string name="toggling_settings">VÄXLINGSINSTÄLLNINGAR</string>
-    <string name="app_icon">Appikon</string>
     <string name="appearance">Utseende</string>
     <string name="appearance_description">Välj hur ADNS visas på den här enheten</string>
     <string name="theme_system_default">Systemstandard</string>
@@ -393,7 +384,6 @@
     <string name="percentage">Procent</string>
     <string name="location">Plats</string>
     <string name="isp">Internetleverantör</string>
-    <string name="country">Land</string>
     <string name="country_code">Landskod</string>
     <string name="network">Nätverk</string>
     <string name="cellular">Mobilnät</string>

@@ -16,11 +16,9 @@
     <string name="api_key_account">APIキーアカウント</string>
     <string name="app_settings">アプリ設定</string>
     <string name="application_activated_successfully">アプリケーションが正常に起動しました。</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">アダルトコンテンツサイトなど、特定のウェブサイトで訪問者の年齢を確認するために使用されている年齢確認チェックを自動的にバイパスします。</string>
     <string name="blocked">ブロック</string>
     <string name="blockerndisabled">ブロッカーの無効</string>
     <string name="blocklists_trackers_affiliate_links">ブロックリスト、トラッカー、アフィリエイトリンク</string>
-    <string name="bypass_age_verification">年齢確認をしない</string>
     <string name="cannot_load_stats">データを読み込めません</string>
     <string name="change_account_settings_for">プロフィールの管理、ログアウト</string>
     <string name="change_provider">プロバイダーの変更</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">デバイス名が設定されていない</string>
     <string name="disable_blocker">DNSを無効にする</string>
     <string name="done">完了！</string>
-    <string name="download">ダウンロード</string>
     <string name="email">Email</string>
     <string name="enable_blocker">DNSを有効にする</string>
     <string name="enable_or_disable_blocker_state_notifications">ステータス通知を有効または無効</string>
-    <string name="enhanced">" (強化)"</string>
     <string name="enter_a_domain">ドメインを入力…</string>
     <string name="enter_a_hostname">ホスト名を入力…</string>
     <string name="failed_to_add">%1$sの追加に失敗</string>
@@ -74,7 +70,6 @@
     <string name="logs_performance_block_page">パフォーマンス、再書き込み、アクセス</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">ネットワークエラー。再度お試しください。</string>
-    <string name="new_update">New アップデート</string>
     <string name="next">次</string>
     <string name="nextdns_name">次のDNS</string>
     <string name="nextdns_profile_settings">次のDNSプロフィールのセッティング</string>
@@ -116,8 +111,6 @@
     <string name="unknown_error">不明なエラー</string>
     <string name="uptime">連続稼働時間</string>
     <string name="use_a_custom_hostname_for_the_dns_server">DNSサーバーにカスタムホスト名を使用します。</string>
-    <string name="version_ncreated_by_eyal_meirom">バージョン %1$s\n製作者:Eyal Meirom</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">バージョン v%1$s が利用可能です。\nダウンロードしますか？</string>
     <string name="waiting_for_permission">許可を待っています…</string>
     <string name="welcome_to_adns">ADNSへようこそ</string>
     <string name="you_can_create_one_at_the_nextdns_website">"NextDNSのWebサイトで作成できます : "</string>
@@ -134,7 +127,6 @@
     <string name="preferences">設定</string>
     <string name="failed_to_load_logs_check_your_connection">ログの読み込みに失敗しました。接続を確認してください。</string>
     <string name="added_to">%1$s を%2$sに追加</string>
-    <string name="view_your_dns_logs">DNSログを閲覧・検索</string>
     <string name="blocked_only">ブロックのみ</string>
     <string name="show_only_blocked_items">ブロックするアイテムのみ表示</string>
     <string name="enabled_only">有効のみ</string>
@@ -351,7 +343,6 @@
     <string name="wifi_battery_optimization_description">バッテリー最適化により, Wi-Fi監視が中断される場合があります。システム設定を確認することはできますが, これは位置情報へのアクセス許可ではありません。</string>
     <string name="settings_status_header">状態</string>
     <string name="toggling_settings">設定の切り替え</string>
-    <string name="app_icon">アプリのアイコン</string>
     <string name="appearance">外観</string>
     <string name="appearance_description">このデバイスでのADNSの表示方法を選択してください</string>
     <string name="theme_system_default">システムデフォルト</string>
@@ -392,7 +383,6 @@
     <string name="percentage">パーセンテージ</string>
     <string name="location">位置</string>
     <string name="isp">ISP</string>
-    <string name="country">国</string>
     <string name="country_code">国コード</string>
     <string name="network">ネットワーク</string>
     <string name="cellular">セルラー</string>

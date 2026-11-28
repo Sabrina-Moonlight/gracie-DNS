@@ -16,11 +16,9 @@
     <string name="api_key_account">API Anahtarı Hesabı</string>
     <string name="app_settings">UYGULAMA AYARLARI</string>
     <string name="application_activated_successfully">Uygulama başarıyla etkinleştirildi.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Belirli web sitelerinin (ör. yetişkin içerik siteleri) erişime izin vermeden önce ziyaretçinin yaşını doğrulamak için kullandığı yaş doğrulama kontrollerini otomatik olarak atlayın.</string>
     <string name="blocked">%1$s (%2$s%%) engellendi</string>
     <string name="blockerndisabled">Engelleyici\nKapalı</string>
     <string name="blocklists_trackers_affiliate_links">Engelleme listeleri, izleyiciler, ortaklık bağlantıları</string>
-    <string name="bypass_age_verification">Yaş Doğrulamasını Atla</string>
     <string name="cannot_load_stats">İstatistikler yüklenemiyor</string>
     <string name="change_account_settings_for">Profilleri yönet, çıkış yap</string>
     <string name="change_provider">Sağlayıcıyı Değiştir</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">Cihaz adı ayarlanmadı</string>
     <string name="disable_blocker">DNS\'i Kapat</string>
     <string name="done">Tamamlandı!</string>
-    <string name="download">İndir</string>
     <string name="email">E-posta</string>
     <string name="enable_blocker">DNS\'i Aç</string>
     <string name="enable_or_disable_blocker_state_notifications">Durum bildirimlerini açın veya kapatın</string>
-    <string name="enhanced">" (Gelişmiş)"</string>
     <string name="enter_a_domain">Bir alan adı girin…</string>
     <string name="enter_a_hostname">Bir sunucu adı girin…</string>
     <string name="failed_to_add">%1$s eklenemedi</string>
@@ -71,7 +67,6 @@
     <string name="logs_performance_block_page">Performans, yeniden yazmalar, erişim</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Ağ hatası. Lütfen tekrar deneyin.</string>
-    <string name="new_update">Yeni Güncelleme</string>
     <string name="next">İleri</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">NEXTDNS PROFİL AYARLARI</string>
@@ -113,8 +108,6 @@
     <string name="unknown_error">Bilinmeyen hata</string>
     <string name="uptime">Çalışma süresi</string>
     <string name="use_a_custom_hostname_for_the_dns_server">DNS sunucusu için özel bir sunucu adı kullanın.</string>
-    <string name="version_ncreated_by_eyal_meirom">Sürüm %1$s\nEyal Meirom tarafından oluşturuldu</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">v%1$s sürümü mevcut.\nİndirmek ister misiniz?</string>
     <string name="waiting_for_permission">İzin bekleniyor…</string>
     <string name="welcome_to_adns">ADNS\'ye Hoş Geldiniz</string>
     <string name="you_can_create_one_at_the_nextdns_website">"NextDNS web sitesinde bir tane oluşturabilirsiniz: "</string>
@@ -131,7 +124,6 @@
     <string name="preferences">TERCİHLER</string>
     <string name="failed_to_load_logs_check_your_connection">Günlükler yüklenemedi. Bağlantınızı kontrol edin.</string>
     <string name="added_to">%2$s öğesine %1$s eklendi</string>
-    <string name="view_your_dns_logs">DNS günlüklerinizi görüntüleyin ve arayın</string>
     <string name="blocked_only">Yalnızca engellenenler</string>
     <string name="show_only_blocked_items">Yalnızca engellenen öğeleri göster</string>
     <string name="enabled_only">Yalnızca etkin olanlar</string>
@@ -345,7 +337,6 @@
     <string name="wifi_battery_optimization_description">Pil optimizasyonu Wi-Fi izlemeyi kesintiye uğratabilir. Sistem ayarını inceleyebilirsiniz ancak bu bir konum izni değildir.</string>
     <string name="settings_status_header">DURUM</string>
     <string name="toggling_settings">AÇMA/KAPAMA AYARLARI</string>
-    <string name="app_icon">Uygulama simgesi</string>
     <string name="appearance">Görünüm</string>
     <string name="appearance_description">ADNS\'in bu cihazda nasıl görüneceğini seçin</string>
     <string name="theme_system_default">Sistem varsayılanı</string>
@@ -393,7 +384,6 @@
     <string name="percentage">Yüzde</string>
     <string name="location">Konum</string>
     <string name="isp">İSS</string>
-    <string name="country">Ülke</string>
     <string name="country_code">Ülke Kodu</string>
     <string name="network">Ağ</string>
     <string name="cellular">Hücresel</string>

@@ -25,7 +25,6 @@
     <string name="device_name_is_not_set">Nama Perangkat tidak diatur</string>
     <string name="disable_blocker">Matikan DNS</string>
     <string name="done">Selesai!</string>
-    <string name="download">Unduh</string>
     <string name="email">Email</string>
     <string name="enable_blocker">Nyalakan DNS</string>
     <string name="enter_a_domain">Masukkan domain…</string>
@@ -65,15 +64,12 @@
     <string name="adns_uses_your_credentials_only_to_automatically_create_your_nextdns_api_key_which_is_then_stored">ADNS hanya menggunakan kredensial Anda untuk membuat kunci API NextDNS secara otomatis, yang kemudian disimpan dalam format terenkripsi. Email dan kata sandi Anda tidak pernah disimpan.</string>
     <string name="allowlist">Daftar Izinkan</string>
     <string name="application_activated_successfully">Aplikasi berhasil diaktifkan.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Secara otomatis melewati pemeriksaan verifikasi usia yang digunakan oleh situs web tertentu, seperti situs konten dewasa, untuk memverifikasi usia pengunjung sebelum memberikan akses.</string>
     <string name="blockerndisabled">Pemblokir\nDinonaktifkan</string>
-    <string name="bypass_age_verification">Lewati Verifikasi Usia</string>
     <string name="change_the_provider_to_use">Ubah provider yang digunakan</string>
     <string name="custom_dns_hostname">Nama Host DNS Kustom</string>
     <string name="custom_hostname_advanced">Nama Host Kustom (lanjutan)</string>
     <string name="device_name_for_logs">Nama Perangkat (untuk Log)</string>
     <string name="enable_or_disable_blocker_state_notifications">Aktifkan atau nonaktifkan notifikasi status</string>
-    <string name="enhanced">" (Ditingkatkan)"</string>
     <string name="hint_to_remove_items_from_the_list_swipe_to_the_left">Untuk menghapus item dari daftar, geser ke kiri.</string>
     <string name="invalid_domain">Domain Tidak Valid</string>
     <string name="lets_set_up_blocking_for_your_browser_and_apps">Mari siapkan pemblokiran untuk browser dan aplikasi Anda.</string>
@@ -81,7 +77,6 @@
     <string name="logs_performance_block_page">Performa, penulisan ulang, akses</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Kesalahan jaringan. Silakan coba lagi.</string>
-    <string name="new_update">Pembaruan Baru</string>
     <string name="next">Berikutnya</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">PENGATURAN PROFIL NEXTDNS</string>
@@ -122,8 +117,6 @@
     <string name="unknown_error">Kesalahan tidak dikenal</string>
     <string name="uptime">Waktu Aktif</string>
     <string name="use_a_custom_hostname_for_the_dns_server">Gunakan nama host kustom untuk server DNS.</string>
-    <string name="version_ncreated_by_eyal_meirom">Versi %1$s\nDibuat oleh Eyal Meirom</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">Versi v%1$s tersedia.\nApakah Anda ingin mengunduhnya?</string>
     <string name="waiting_for_permission">Menunggu izin…</string>
     <string name="welcome_to_adns">Selamat datang di ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"Anda dapat membuatnya di situs web NextDNS: "</string>
@@ -140,7 +133,6 @@
     <string name="preferences">PREFERENSI</string>
     <string name="failed_to_load_logs_check_your_connection">Gagal memuat log. Periksa koneksi Anda.</string>
     <string name="added_to">%1$s ditambahkan ke %2$s</string>
-    <string name="view_your_dns_logs">Lihat dan cari log DNS Anda</string>
     <string name="blocked_only">Hanya yang diblokir</string>
     <string name="show_only_blocked_items">Tampilkan hanya item yang diblokir</string>
     <string name="enabled_only">Hanya yang diaktifkan</string>
@@ -358,7 +350,6 @@
     <string name="wifi_battery_optimization_description">Pengoptimalan baterai dapat mengganggu pemantauan Wi-Fi. Anda dapat meninjau pengaturan sistem, tetapi hal ini bukan izin lokasi.</string>
     <string name="settings_status_header">STATUS</string>
     <string name="toggling_settings">PENGATURAN PENGALIHAN</string>
-    <string name="app_icon">Ikon aplikasi</string>
     <string name="appearance">Tampilan</string>
     <string name="appearance_description">Pilih tampilan ADNS pada perangkat ini</string>
     <string name="theme_system_default">Bawaan sistem</string>
@@ -393,7 +384,6 @@
     <string name="percentage">Persentase</string>
     <string name="location">Lokasi</string>
     <string name="isp">ISP</string>
-    <string name="country">Negara</string>
     <string name="country_code">Kode Negara</string>
     <string name="network">Jaringan</string>
     <string name="cellular">Seluler</string>

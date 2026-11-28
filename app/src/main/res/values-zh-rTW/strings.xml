@@ -16,13 +16,11 @@
     <string name="api_key_account">API Key 帳號</string>
     <string name="app_settings">應用程式設定</string>
     <string name="application_activated_successfully">程式已順利啟動。</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">自動繞過特定網站的年齡檢查（比如含有成人內容的網站）。</string>
     <string name="blocked">已阻擋 %1$s（%2$s%%）</string>
     <string name="enable_blocker">啟用 DNS</string>
     <string name="enable_or_disable_blocker_state_notifications">啟用或關閉狀態通知</string>
     <string name="blockerndisabled">阻擋器\n已停用</string>
     <string name="blocklists_trackers_affiliate_links">阻擋清單、追蹤器、推廣連結</string>
-    <string name="bypass_age_verification">繞過年齡檢查</string>
     <string name="cannot_load_stats">無法載入統計資料</string>
     <string name="change_account_settings_for">管理設定檔、登出</string>
     <string name="change_provider">更換供應商（Provider）</string>
@@ -42,9 +40,7 @@
     <string name="device_name_is_not_set">未設定裝置名稱</string>
     <string name="disable_blocker">停用 DNS</string>
     <string name="done">完成！</string>
-    <string name="download">下載</string>
     <string name="email">電子郵件</string>
-    <string name="enhanced">" （加強）"</string>
     <string name="enter_a_domain">輸入域名…</string>
     <string name="enter_a_hostname">輸入 hostname…</string>
     <string name="failed_to_add">新增 %1$s 失敗</string>
@@ -104,7 +100,6 @@
     <string name="logs_performance_block_page">性能、重寫、訪問</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">網路錯誤，請重試。</string>
-    <string name="new_update">有新版本</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">NextDNS 設定檔設定</string>
     <string name="not_running">未運作</string>
@@ -115,8 +110,6 @@
     <string name="unknown_error">未知的錯誤</string>
     <string name="uptime">運作時間</string>
     <string name="use_a_custom_hostname_for_the_dns_server">為 DNS 伺服器設定自訂 hostname。</string>
-    <string name="version_ncreated_by_eyal_meirom">版本 %1$s\n由 Eyal Meirom 開發</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">版本已可更新到 v%1$s。\n要下載嗎？</string>
     <string name="waiting_for_permission">正在等待授權…</string>
     <string name="welcome_to_adns">歡迎使用 ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"您可在 NextDNS 網站上新建一個： "</string>
@@ -133,7 +126,6 @@
     <string name="preferences">偏好設定</string>
     <string name="failed_to_load_logs_check_your_connection">載入紀錄失敗。請檢查網路連線。</string>
     <string name="added_to">已新增 %1$s 至 %2$s</string>
-    <string name="view_your_dns_logs">查看與搜尋 DNS 紀錄</string>
     <string name="blocked_only">只阻擋</string>
     <string name="show_only_blocked_items">只顯示已阻擋項目</string>
     <string name="enabled_only">只包含啟用中的</string>
@@ -348,7 +340,6 @@
     <string name="wifi_battery_optimization_description">電池最佳化可能會導致 Wi-Fi 監控中斷。您可以在系統設定調整，但這與位置權限無關。</string>
     <string name="settings_status_header">狀態</string>
     <string name="toggling_settings">開關設定</string>
-    <string name="app_icon">App 圖示</string>
     <string name="appearance">外觀</string>
     <string name="appearance_description">改變 ADNS 在此裝置上看起來的樣子</string>
     <string name="theme_system_default">系統預設</string>
@@ -364,7 +355,6 @@
     <string name="show_on_graph">在圖表上顯示</string>
     <string name="top_domains">頂級域名</string>
     <string name="location">位置</string>
-    <string name="country">國家</string>
     <string name="country_code">國家代碼</string>
     <string name="max_graph_items_reached">圖表一次最多顯示六個項目</string>
     <string name="privacy_policy">隱私權政策</string>

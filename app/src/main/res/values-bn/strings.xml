@@ -16,11 +16,9 @@
     <string name="api_key_account">API Key অ্যাকাউন্ট</string>
     <string name="app_settings">অ্যাপ সেটিংস</string>
     <string name="application_activated_successfully">অ্যাপটি সফলভাবে চালু হয়েছে।</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">অ্যাডাল্ট কন্টেন্ট সাইটের মতো কিছু নির্দিষ্ট ওয়েবসাইটে প্রবেশের অনুমতি দেওয়ার আগে ভিজিটরের বয়স যাচাই করার জন্য ব্যবহৃত বয়স যাচাইকরণ চেকগুলো স্বয়ংক্রিয়ভাবে বাইপাস করুন।</string>
     <string name="blocked">%1$s (%2$s%%) ব্লক করা হয়েছে</string>
     <string name="blockerndisabled">ব্লকার\nবন্ধ</string>
     <string name="blocklists_trackers_affiliate_links">ব্লকলিস্ট, ট্র্যাকার, অ্যাফিলিয়েট লিংক</string>
-    <string name="bypass_age_verification">বয়স যাচাইকরণ এড়িয়ে যান</string>
     <string name="cannot_load_stats">স্ট্যাটাস লোড করা যাচ্ছে না</string>
     <string name="change_account_settings_for">প্রোফাইল ম্যানেজ করুন, লগ আউট করুন</string>
     <string name="change_provider">প্রোভাইডার পরিবর্তন করুন</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">ডিভাইসের নাম সেট করা হয়নি</string>
     <string name="disable_blocker">DNS নিষ্ক্রিয় করুন</string>
     <string name="done">সম্পন্ন!</string>
-    <string name="download">ডাউনলোড</string>
     <string name="email">ইমেইল</string>
     <string name="enable_blocker">DNS চালু করুন</string>
     <string name="enable_or_disable_blocker_state_notifications">স্টেট নোটিফিকেশন সক্রিয় বা নিষ্ক্রিয় করুন</string>
-    <string name="enhanced">" (উন্নত)"</string>
     <string name="enter_a_domain">একটি ডোমেইন লিখুন…</string>
     <string name="enter_a_hostname">একটি হোস্টনেম লিখুন…</string>
     <string name="failed_to_add">%1$s যোগ করা যায়নি</string>
@@ -71,7 +67,6 @@
     <string name="logs_performance_block_page">পারফরম্যান্স, রিরাইট, অ্যাক্সেস</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">নেটওয়ার্ক ত্রুটি। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
-    <string name="new_update">নতুন আপডেট</string>
     <string name="next">পরবর্তী</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">NEXTDNS প্রোফাইল সেটিংস</string>
@@ -112,8 +107,6 @@
     <string name="unknown_error">অজানা ত্রুটি</string>
     <string name="uptime">আপটাইম</string>
     <string name="use_a_custom_hostname_for_the_dns_server">DNS সার্ভারের জন্য কাস্টম হোস্টনেম ব্যবহার করুন।</string>
-    <string name="version_ncreated_by_eyal_meirom">ভার্সন %1$s\nতৈরি করেছেন আইয়াল মেইরম</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">ভার্সন v%1$s উপলব্ধ রয়েছে।\nআপনি কি এটি ডাউনলোড করতে চান?</string>
     <string name="waiting_for_permission">অনুমতির জন্য অপেক্ষা করা হচ্ছে…</string>
     <string name="welcome_to_adns">ADNS এ স্বাগতম</string>
     <string name="you_can_create_one_at_the_nextdns_website">"আপনি NextDNS ওয়েবসাইটে একটি তৈরি করতে পারেন: "</string>
@@ -130,7 +123,6 @@
     <string name="preferences">পছন্দসমূহ</string>
     <string name="failed_to_load_logs_check_your_connection">Private DNS</string>
     <string name="added_to">%2$s-এ %1$s যোগ করা হয়েছে</string>
-    <string name="view_your_dns_logs">আপনার DNS লগ দেখুন এবং সার্চ করুন</string>
     <string name="blocked_only">শুধুমাত্র ব্লক করা</string>
     <string name="show_only_blocked_items">শুধুমাত্র ব্লক করা আইটেমগুলো দেখান</string>
     <string name="enabled_only">শুধুমাত্র সক্রিয়</string>
@@ -345,7 +337,6 @@
     <string name="wifi_battery_optimization_description">ব্যাটারি অপ্টিমাইজেশন ওয়াই-ফাই মনিটরিংয়ে ব্যাঘাত ঘটাতে পারে। আপনি সিস্টেম সেটিংস রিভিউ করতে পারেন, তবে এটি কোনো লোকেশন পারমিশন নয়।</string>
     <string name="settings_status_header">স্টেটাস</string>
     <string name="toggling_settings">সেটিংস পরিবর্তন করা হচ্ছে</string>
-    <string name="app_icon">আপ আইকন</string>
     <string name="appearance">আপীরেন্স</string>
     <string name="appearance_description">এই ডিভাইসে ADNS দেখতে কেমন হবে তা বেছে নিন</string>
     <string name="theme_system_default">সিস্টেম দেফল্ট</string>
@@ -393,7 +384,6 @@
     <string name="percentage">Percentage</string>
     <string name="location">লোকেশন</string>
     <string name="isp">ISP</string>
-    <string name="country">দেশ</string>
     <string name="country_code">কান্ট্রি কোড</string>
     <string name="network">নেটওয়ার্ক</string>
     <string name="cellular">Cellular</string>

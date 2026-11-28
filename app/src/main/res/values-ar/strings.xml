@@ -14,11 +14,9 @@
     <string name="api_key_account">حساب مفتاح API</string>
     <string name="app_settings">إعدادات التطبيق</string>
     <string name="application_activated_successfully">تم تفعيل التطبيق بنجاح</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">تجاوز عمليات التحقق من العمر تلقائيًا التي تستخدمها بعض المواقع الإلكترونية، مثل مواقع المحتوى للبالغين، للتحقق من عمر الزائر قبل السماح له بالوصول.</string>
     <string name="blocked">تم حظر %1$s (%2$s%)</string>
     <string name="blockerndisabled">مانع\nمعطل</string>
     <string name="blocklists_trackers_affiliate_links">قوائم الحظر، أدوات التتبع، روابط التسويق بالعمولة</string>
-    <string name="bypass_age_verification">تجاوز التحقق من العمر</string>
     <string name="cannot_load_stats">لا يمكن تحميل الإحصائيات</string>
     <string name="change_account_settings_for">إدارة الملفات الشخصية، تسجيل الخروج</string>
     <string name="change_provider">موفر التغيير</string>
@@ -38,11 +36,9 @@
     <string name="device_name_is_not_set">لم يتم تعيين اسم الجهاز</string>
     <string name="disable_blocker">تعطيل (DNS)</string>
     <string name="done">تم!</string>
-    <string name="download">تحميل</string>
     <string name="email">بريد إلكتروني</string>
     <string name="enable_blocker">تفعيل (DNS)</string>
     <string name="enable_or_disable_blocker_state_notifications">تفعيل أو تعطيل إشعارات الحالة</string>
-    <string name="enhanced">" (محسّن)"</string>
     <string name="enter_a_domain">­أدخل نطاقًا…</string>
     <string name="enter_a_hostname">أدخل اسم المضيف…</string>
     <string name="failed_to_add">فشل في إضافة %1$s</string>
@@ -70,7 +66,6 @@
     <string name="logs">سجلات</string>
     <string name="logs_performance_block_page">الأداء، إعادة الكتابة، الوصول</string>
     <string name="network_error_please_try_again">حدث خطأ في الشبكة. يرجى المحاولة مرة أخرى.</string>
-    <string name="new_update">تحديث جديد</string>
     <string name="next">التالي</string>
     <string name="nextdns_profile_settings">إعدادات ملف تعريف NEXTDNS</string>
     <string name="not_running">لا يعمل</string>
@@ -116,8 +111,6 @@
     <string name="unknown_error">خطأ غير معروف</string>
     <string name="uptime">وقت التشغيل</string>
     <string name="use_a_custom_hostname_for_the_dns_server">إستخدم إسم مضيف مخصص لخادم نطاقات الأسماء.</string>
-    <string name="version_ncreated_by_eyal_meirom">إصدار %1$s\nصنع بواسطة Eyal Meirom</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">الإصدار v%1$s متاح الأن.\nهل تريد تحميله؟</string>
     <string name="waiting_for_permission">بإنتظار الإذن…</string>
     <string name="welcome_to_adns">مرحبا بك في ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"يمكنك إنشاء واحد من خلال الموقع NextDNS الإلكتروني: "</string>
@@ -134,7 +127,6 @@
     <string name="preferences">التفضيلات</string>
     <string name="failed_to_load_logs_check_your_connection">فشل في تحميل السجلات. تحقق من إتصالك.</string>
     <string name="added_to">تمت إضافة %1$s إلى %2$s</string>
-    <string name="view_your_dns_logs">عرض والبحث في سجلات نظام أسماء النطاقات (DNS) الخاص بك</string>
     <string name="blocked_only">المحظور فقط</string>
     <string name="show_only_blocked_items">أضهر العناصر المحظوره فقط</string>
     <string name="enabled_only">المفعلة فقط</string>

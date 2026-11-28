@@ -2,7 +2,6 @@ package com.eyalm.adns.data.nextdns.profile
 
 import android.content.Context
 import android.net.Uri
-import androidx.core.content.edit
 import com.eyalm.adns.data.AppRuntimeRepositories
 import com.eyalm.adns.data.DnsRepository
 import com.eyalm.adns.data.TokenManager

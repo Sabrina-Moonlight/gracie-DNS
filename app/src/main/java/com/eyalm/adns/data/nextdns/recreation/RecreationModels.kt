@@ -28,8 +28,3 @@ data class ParentalRecreationState(
 data class UpdateRecreationScheduleRequest(
     @SerializedName("recreation") val recreation: RecreationScheduleDto,
 )
-
-enum class RecreationItemCollection(val wireName: String) {
-    Services("services"),
-    Categories("categories"),
-}

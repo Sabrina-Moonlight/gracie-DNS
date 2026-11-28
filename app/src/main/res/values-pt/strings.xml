@@ -16,11 +16,9 @@
     <string name="api_key_account">Conta com chave de API</string>
     <string name="app_settings">CONFIGURAÇÕES DA APP</string>
     <string name="application_activated_successfully">Aplicação ativada com sucesso.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Ignore automaticamente as verificações de idade usadas por certos sites, como sites de conteúdo adulto, para verificar a idade de um visitante antes de permitir o acesso.</string>
     <string name="blocked">%1$s (%2$s%%) bloqueado</string>
     <string name="blockerndisabled">Bloqueador\nDesativado</string>
     <string name="blocklists_trackers_affiliate_links">Listas de bloqueio, rasteadores, ligações de afiliados</string>
-    <string name="bypass_age_verification">Ignorar verificação de idade</string>
     <string name="cannot_load_stats">Não foi possível carregar as estatísticas</string>
     <string name="change_account_settings_for">Gerir perfis, encerrar sessão</string>
     <string name="change_provider">Alterar fornecedor</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">Nome do dispositivo não definido</string>
     <string name="disable_blocker">Desativar bloqueador</string>
     <string name="done">Feito!</string>
-    <string name="download">Descarregar</string>
     <string name="email">Email</string>
     <string name="enable_blocker">Ativar bloqueador</string>
     <string name="enable_or_disable_blocker_state_notifications">Ativar ou desativar notificações de estado</string>
-    <string name="enhanced">" (Aprimorado)"</string>
     <string name="enter_a_domain">Digite um domínio…</string>
     <string name="enter_a_hostname">Digite o nome do host…</string>
     <string name="failed_to_add">Falha ao adicionar %1$s</string>
@@ -74,7 +70,6 @@
     <string name="logs_performance_block_page">Registos, desempenho, página de bloqueio</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Erro de rede. Por favor, tente novamente.</string>
-    <string name="new_update">Nova atualização</string>
     <string name="next">Próximo</string>
     <string name="nextdns_name">nextDNS</string>
     <string name="nextdns_profile_settings">CONFIGURAÇÕES DE PERFIL DO NEXTDNS</string>
@@ -115,8 +110,6 @@
     <string name="unknown_error">Erro desconhecido</string>
     <string name="uptime">Tempo de atividade</string>
     <string name="use_a_custom_hostname_for_the_dns_server">Use um nome de host personalizado para o servidor DNS.</string>
-    <string name="version_ncreated_by_eyal_meirom">Versão %1$s\nCriado por Eyal Meiorom</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">A versão v%1$s está disponível.\nGostaria de descarregá-lo?</string>
     <string name="waiting_for_permission">A aguardar permissão…</string>
     <string name="welcome_to_adns">Bem-vindo ao ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"Pode criar um no site NextDNS: "</string>
@@ -132,7 +125,6 @@
     <string name="preferences">PREFERÊNCIAS</string>
     <string name="failed_to_load_logs_check_your_connection">Falha ao carregar registos. Verifique a sua conexão.</string>
     <string name="added_to">Adicionado %1$s a %2$s</string>
-    <string name="view_your_dns_logs">Veja os seus registos DNS</string>
     <string name="blocked_only">Apenas bloqueado</string>
     <string name="show_only_blocked_items">Mostrar apenas elementos bloqueados</string>
     <string name="enabled_only">Somente ativado</string>
@@ -371,7 +363,6 @@
     <string name="wifi_battery_optimization_description">A otimização da pilha pode interromper o monitoramento do Wi-Fi. Pode revisar a configuração do sistema, mas esta não é uma permissão de localização.</string>
     <string name="settings_status_header">ESTADO</string>
     <string name="toggling_settings">ALTERNAR CONFIGURAÇÕES</string>
-    <string name="app_icon">Ícone da app</string>
     <string name="appearance">Aparência</string>
     <string name="appearance_description">Escolha a aparência do ADNS neste dispositivo</string>
     <string name="theme_system_default">Padrão do sistema</string>
@@ -412,7 +403,6 @@
     <string name="percentage">Percentagem</string>
     <string name="location">Localização</string>
     <string name="isp">ISP</string>
-    <string name="country">País</string>
     <string name="country_code">Código do país</string>
     <string name="network">Rede</string>
     <string name="cellular">Telemóvel</string>

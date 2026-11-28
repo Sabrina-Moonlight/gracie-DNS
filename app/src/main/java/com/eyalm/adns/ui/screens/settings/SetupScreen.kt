@@ -63,7 +63,6 @@ import com.eyalm.adns.data.nextdns.setup.SetupGuideMethod
 import com.eyalm.adns.data.nextdns.setup.SetupGuideTag
 import com.eyalm.adns.data.nextdns.setup.SetupContent
 import com.eyalm.adns.data.nextdns.setup.segments
-import com.eyalm.adns.domain.nextdns.ApiResult
 import com.eyalm.adns.ui.components.dialogs.FormDialog
 import com.eyalm.adns.ui.components.settings.LoadingError
 import com.eyalm.adns.viewmodel.SettingsViewModel

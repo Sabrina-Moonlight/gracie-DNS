@@ -16,11 +16,9 @@
     <string name="api_key_account">Tài khoản khóa API</string>
     <string name="app_settings">CÀI ĐẶT ỨNG DỤNG</string>
     <string name="application_activated_successfully">Ứng dụng đã được kích hoạt thành công.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Tự động bỏ qua các bước kiểm tra xác minh độ tuổi được sử dụng bởi một số trang web, chẳng hạn như các trang web nội dung người lớn, để xác minh tuổi của khách truy cập trước khi cho phép truy cập.</string>
     <string name="blocked">%1$s (%2$s%%) bị chặn</string>
     <string name="blockerndisabled">Chặn\nĐã tắt</string>
     <string name="blocklists_trackers_affiliate_links">Danh sách chặn, trình theo dõi, liên kết tiếp thị liên kết</string>
-    <string name="bypass_age_verification">Bỏ qua bước xác minh tuổi</string>
     <string name="cannot_load_stats">Không thể tải số liệu thống kê</string>
     <string name="change_account_settings_for">Quản lý hồ sơ, đăng xuất</string>
     <string name="change_provider">Thay đổi nhà cung cấp</string>
@@ -39,10 +37,8 @@
     <string name="device_name_is_not_set">Tên thiết bị chưa được thiết lập</string>
     <string name="disable_blocker">Vô hiệu hóa DNS</string>
     <string name="done">Xong!</string>
-    <string name="download">Tải xuống</string>
     <string name="enable_blocker">Bật DNS</string>
     <string name="enable_or_disable_blocker_state_notifications">Bật hoặc tắt thông báo trạng thái</string>
-    <string name="enhanced">" (Đã được cải tiến)"</string>
     <string name="enter_a_domain">Nhập tên miền…</string>
     <string name="failed_to_add">Không thể thêm %1$s</string>
     <string name="cloudflare_dns">Cloudflare DNS</string>
@@ -71,7 +67,6 @@
     <string name="logs">Nhật ký</string>
     <string name="logs_performance_block_page">Hiệu năng, viết lại, quyền truy cập</string>
     <string name="network_error_please_try_again">Lỗi mạng. Vui lòng thử lại.</string>
-    <string name="new_update">Cập nhật mới</string>
     <string name="next">Tiếp theo</string>
     <string name="nextdns_profile_settings">Cài đặt hồ sơ NextDNS</string>
     <string name="not_running">Không hoạt động</string>

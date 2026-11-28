@@ -19,7 +19,6 @@
     <string name="blocked">%1$s (%2$s%%) bloqueado</string>
     <string name="blockerndisabled">Bloqueador\nInhabilitado</string>
     <string name="blocklists_trackers_affiliate_links">Listado de bloqueos, seguimientos, enlaces afiliados</string>
-    <string name="bypass_age_verification">Eludir verificación de edad</string>
     <string name="cannot_load_stats">No se pueden cargar las estadísticas</string>
     <string name="change_account_settings_for">Gestionar perfiles, cerrar sesión</string>
     <string name="change_provider">Cambiar proveedor</string>
@@ -39,11 +38,9 @@
     <string name="device_name_is_not_set">El nombre del dispositivo no está establecido</string>
     <string name="disable_blocker">Deshabilitar DNS</string>
     <string name="done">¡Completado!</string>
-    <string name="download">Descargar</string>
     <string name="email">Correo-e</string>
     <string name="enable_blocker">Habilitar DNS</string>
     <string name="enable_or_disable_blocker_state_notifications">Habilite o inhabilita notificaciones de estado</string>
-    <string name="enhanced">" (Mejorada)"</string>
     <string name="enter_a_domain">Introduzca un dominio…</string>
     <string name="enter_a_hostname">Introduzca un nombre de host…</string>
     <string name="failed_to_add">No fue posible añadir %1$s</string>
@@ -70,7 +67,6 @@
     <string name="logs_performance_block_page">Rendimiento, reescrituras, acceso</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Error de red. Por favor, inténtalo de nuevo.</string>
-    <string name="new_update">Nueva actualización</string>
     <string name="next">Siguiente</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">AJUSTES DE PERFIL NEXTDNS</string>
@@ -114,16 +110,13 @@
     <string name="rename_profile">Renombrar perfil</string>
     <string name="recreation_day_unknown">Día desconocido</string>
     <string name="waiting_for_permission">Esperado a permisos…</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">La versión v%1$s está disponible.\n¿Le gustaría descargarla?</string>
     <string name="tile_already_added">¡Azulejo ya añadido!</string>
     <string name="total_queries">CONSULTAS TOTAL</string>
     <string name="unknown_error">Error desconocido</string>
     <string name="uptime">Tiempo activo</string>
     <string name="use_a_custom_hostname_for_the_dns_server">Utilice un nombre de host personalizado para el servidor DNS.</string>
-    <string name="version_ncreated_by_eyal_meirom">Versión %1$s\nCreado por Eyal Meirom</string>
     <string name="language_description">Seleccione el idioma de la aplicación</string>
     <string name="language">Idioma</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Evita automáticamente los controles de verificación de edad utilizados por ciertos sitios web, como los sitios de contenido de adultos, para verificar la edad de un visitante antes de permitir el acceso.</string>
     <string name="welcome_to_adns">Bienvenido a ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"Puede crear uno en el sitio web de NextDNS: "</string>
     <string name="your_dns_settings_have_been_updated">Vuestros ajustes de DNS han sido actualizados.</string>
@@ -137,7 +130,6 @@
     <string name="preferences">PREFERENCIAS</string>
     <string name="failed_to_load_logs_check_your_connection">No fue posible cargar registros. Compruebe su conexión.</string>
     <string name="added_to">Añadido %1$s a %2$s</string>
-    <string name="view_your_dns_logs">Ver sus registros de DNS</string>
     <string name="blocked_only">Solo bloqueado</string>
     <string name="show_only_blocked_items">Solo mostrar elementos bloqueados</string>
     <string name="enabled_only">Solo habilitados</string>
@@ -346,7 +338,6 @@
     <string name="wifi_battery_optimization_description">Optimización de la batería puede interrumpir Monitoreo Wi-Fi. Puede revisar la configuración del sistema, pero este no es un permiso de ubicación.</string>
     <string name="settings_status_header">ESTADO</string>
     <string name="toggling_settings">CONMUTAR AJUSTES</string>
-    <string name="app_icon">Icono app</string>
     <string name="appearance">Aspecto</string>
     <string name="appearance_description">Elija como se ve ADNS en este dispositivo</string>
     <string name="theme_system_default">Sistema predeterminado</string>
@@ -393,7 +384,6 @@
     <string name="percentage">Porcentaje</string>
     <string name="location">Ubicación</string>
     <string name="isp">ISP</string>
-    <string name="country">País</string>
     <string name="country_code">Código de país</string>
     <string name="network">Red</string>
     <string name="cellular">Celular</string>
@@ -411,8 +401,6 @@
     <string name="saved_dns_servers">DNS guardados</string>
     <string name="delete_saved_dns">Borrar DNS guardado</string>
     <string name="controld_title">ControlD</string>
-    <string name="controld_back">Atrás</string>
-    <string name="controld_connected">Conectada con ControlD</string>
     <string name="controld_sign_out">Cerrar sesión</string>
     <string name="controld_token_help">Pega tu token de API de ControlD. Puedes crearlo en controld.com/dashboard/api (con el permiso «Read» basta).</string>
     <string name="controld_token_label">Token de API</string>
@@ -424,12 +412,10 @@
     <string name="controld_error_other">ControlD respondió algo inesperado.</string>
     <string name="controld_provider_row">Cuenta de ControlD</string>
     <string name="controld_provider_row_desc">Iniciar sesión con un token de API</string>
-    <string name="controld_endpoints_title">Tus dispositivos</string>
     <string name="controld_endpoints_help">Toca un dispositivo para usar su dirección como tu DNS.</string>
     <string name="controld_endpoints_error">No se pudieron cargar tus dispositivos.</string>
     <string name="controld_endpoints_empty">No hay dispositivos en tu cuenta.</string>
     <string name="controld_endpoint_no_host">Sin dirección DNS disponible</string>
-    <string name="controld_endpoint_applied">En uso</string>
     <string name="controld_filters_active">Filtros activos:</string>
     <string name="controld_filters_none">Sin filtros activos</string>
     <string name="controld_filters_error">No se pudieron cargar los filtros</string>

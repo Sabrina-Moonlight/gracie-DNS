@@ -16,11 +16,9 @@
     <string name="api_key_account">ଏପିଆଇ କୁଞ୍ଜୀ</string>
     <string name="app_settings">ଆପ୍ ସେଟିଂସ୍</string>
     <string name="application_activated_successfully">ଆପ୍ଲିକେସନ୍ ସଫଳତାର ସହ ସକ୍ରିୟ ହୋଇଛି</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">ପ୍ରବେଶ ଅନୁମତି ଦେବା ପୂର୍ବରୁ ପରିଦର୍ଶକଙ୍କ ବୟସ ଯାଞ୍ଚ କରିବା ପାଇଁ ବୟସ୍କ ବିଷୟବସ୍ତୁ ସାଇଟ୍ ପରି କିଛି ନିର୍ଦ୍ଦିଷ୍ଟ ୱେବସାଇଟ୍ ଦ୍ୱାରା ବ୍ୟବହୃତ ବୟସ ଯାଞ୍ଚ ଯାଞ୍ଚଗୁଡ଼ିକୁ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ବାଇପାସ୍ କରନ୍ତୁ।</string>
     <string name="blocked">%1$s (%2$s%) ଅବରୋଧ କରାଯାଇଛି</string>
     <string name="blockerndisabled">ଅବରୋଧକ\nଅକ୍ଷମ କରାଯାଇଛି</string>
     <string name="blocklists_trackers_affiliate_links">ବ୍ଲକଲିଷ୍ଟ, ଟ୍ରାକର, ଜଡ଼ିତ ଲିଙ୍କ୍</string>
-    <string name="bypass_age_verification">ବୟସ ଯାଞ୍ଚକରଣ ବାଇପାସ୍ କରନ୍ତୁ</string>
     <string name="cannot_load_stats">ପରିସଂଖ୍ୟାନ ଲୋଡ୍ କରାଯାଇପାରିବ ନାହିଁ</string>
     <string name="change_account_settings_for">ପ୍ରୋଫାଇଲ୍‌ଗୁଡ଼ିକ ପରିଚାଳନା କରନ୍ତୁ, ଲଗ୍ ଆଉଟ୍ କରନ୍ତୁ</string>
     <string name="change_provider">ପ୍ରଦାତା ବଦଳାନ୍ତୁ</string>

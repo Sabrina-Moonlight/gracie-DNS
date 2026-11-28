@@ -120,28 +120,6 @@ fun MaturityBadge(
     }
 }
 
-@Composable
-fun BetaBadge(
-    text: String,
-    modifier: Modifier = Modifier,
-) {
-    val formattedBeta = text.replaceFirstChar {
-        if (it.isLowerCase()) it.titlecase(java.util.Locale.ROOT) else it.toString()
-    }
-    Surface(
-        color = MaterialTheme.colorScheme.primaryContainer,
-        contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
-        shape = RoundedCornerShape(8.dp),
-        modifier = modifier,
-    ) {
-        Text(
-            text = formattedBeta,
-            style = MaterialTheme.typography.labelSmall,
-            modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
-        )
-    }
-}
-
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun SegmentedSettingRow(

@@ -16,11 +16,9 @@
     <string name="api_key_account">Аккаунт по API ключу</string>
     <string name="app_settings">НАСТРОЙКИ ПРИЛОЖЕНИЯ</string>
     <string name="application_activated_successfully">Приложение успешно активировано.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Автоматически обходить проверку возраста на некоторых сайтах (например, для взрослых), требующих подтверждения возраста перед получением доступа.</string>
     <string name="blocked">Заблокировано %1$s (%2$s%%)</string>
     <string name="blockerndisabled">Блокировщик\nвыключен</string>
     <string name="blocklists_trackers_affiliate_links">Списки блокировки, трекеры, реферальные ссылки</string>
-    <string name="bypass_age_verification">Обход проверки возраста</string>
     <string name="cannot_load_stats">Не удалось загрузить статистику</string>
     <string name="change_account_settings_for">Изменить настройки аккаунта для %1$s</string>
     <string name="change_provider">Сменить провайдера</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">Имя устройства не задано</string>
     <string name="disable_blocker">Выключить блокировщик</string>
     <string name="done">Готово!</string>
-    <string name="download">Скачать</string>
     <string name="email">Электронная почта</string>
     <string name="enable_blocker">Включить блокировщик</string>
     <string name="enable_or_disable_blocker_state_notifications">Включить или выключить уведомления о состоянии</string>
-    <string name="enhanced">" (Улучшенный)"</string>
     <string name="enter_a_domain">Введите домен…</string>
     <string name="enter_a_hostname">Введите имя хоста…</string>
     <string name="failed_to_add">Не удалось добавить %1$s</string>
@@ -71,7 +67,6 @@
     <string name="logs_performance_block_page">Журналы, производительность, страница блокировки</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Сетевая ошибка. Попробуйте еще раз.</string>
-    <string name="new_update">Новое обновление</string>
     <string name="next">Далее</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">НАСТРОЙКИ ПРОФИЛЯ NEXTDNS</string>
@@ -113,8 +108,6 @@
     <string name="unknown_error">Неизвестная ошибка</string>
     <string name="uptime">Время работы</string>
     <string name="use_a_custom_hostname_for_the_dns_server">Использовать свое имя хоста для DNS сервера</string>
-    <string name="version_ncreated_by_eyal_meirom">Версия %1$s\nСоздатель Eyal Meirom</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">Доступна версия v%1$s.\nХотите ее скачать?</string>
     <string name="waiting_for_permission">Ожидание разрешения…</string>
     <string name="welcome_to_adns">Добро пожаловать в ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"Вы можете создать его на сайте NextDNS: "</string>
@@ -131,7 +124,6 @@
     <string name="preferences">НАСТРОЙКИ</string>
     <string name="failed_to_load_logs_check_your_connection">Не удалось загрузить журналы. Проверьте подключение к сети.</string>
     <string name="added_to">Добавлено %1$s в %2$s</string>
-    <string name="view_your_dns_logs">Просмотр журналов DNS.</string>
     <string name="blocked_only">Только заблокированные</string>
     <string name="show_only_blocked_items">Показывать только заблокированные элементы</string>
     <string name="enabled_only">Только включенные</string>
@@ -345,7 +337,6 @@
     <string name="wifi_battery_optimization_description">Оптимизация батареи может прервать мониторинг Wi-Fi. Вы можете проверить системные настройки, однако это не связано с разрешением на местоположение.</string>
     <string name="settings_status_header">СТАТУС</string>
     <string name="toggling_settings">НАСТРОЙКИ ПЕРЕКЛЮЧЕНИЯ</string>
-    <string name="app_icon">Иконка приложения</string>
     <string name="appearance">Внешний вид</string>
     <string name="appearance_description">Выберите оформление ADNS на этом устройстве</string>
     <string name="theme_system_default">Системная тема</string>

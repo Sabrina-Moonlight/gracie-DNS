@@ -70,7 +70,6 @@ import com.eyalm.adns.ui.components.dialogs.ConfirmationDialog
 import com.eyalm.adns.ui.screens.ActivationScreen
 import com.eyalm.adns.ui.screens.HomeScreen
 import com.eyalm.adns.ui.screens.StatsScreen
-import com.eyalm.adns.ui.screens.UpdateDialog
 import com.eyalm.adns.ui.screens.forcedActivationExitPolicy
 import com.eyalm.adns.ui.screens.settings.LogsScreen
 import com.eyalm.adns.ui.screens.settings.SettingsTabRouter
@@ -200,7 +199,6 @@ class MainActivity : AppCompatActivity() {
                             onEditClick = {
                                 settingsViewModel.setPage(SettingsViewModel.Page.PROVIDERS)
                             },
-                            checkForUpdate = viewModel::checkForUpdate,
                             settingsPage = settingsPage,
                             capabilities = capabilities,
                         )
@@ -222,7 +220,6 @@ fun Greeting(
     modifier: Modifier = Modifier,
     server: String,
     onEditClick: () -> Unit = {},
-    checkForUpdate: ((String?) -> Unit) -> Unit = {},
     settingsPage: SettingsViewModel.Page = SettingsViewModel.Page.MAIN,
     capabilities: AppCapabilities,
 ) {
@@ -291,23 +288,6 @@ fun Greeting(
             onDismiss = nextDnsSessionManager::dismissReauthenticationRequest,
         )
     }
-    val latestVersion = remember { mutableStateOf<String?>(null) }
-
-    if (!BuildConfig.IS_FOSS) {
-        LaunchedEffect(Unit) {
-            checkForUpdate { version ->
-                latestVersion.value = version
-            }
-        }
-
-        latestVersion.value?.let { version ->
-            UpdateDialog(
-                version = version,
-                onClose = { latestVersion.value = null }
-            )
-        }
-    }
-
     LaunchedEffect(capabilities.visibleTabs, capabilities.defaultTab) {
         selectedItem = resolveAvailableMainTab(selectedItem, capabilities)
     }

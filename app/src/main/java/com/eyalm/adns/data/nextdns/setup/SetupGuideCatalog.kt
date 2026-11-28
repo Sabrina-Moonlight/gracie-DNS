@@ -40,8 +40,6 @@ sealed interface SetupGuideBlock {
 object GuideLinks {
     const val WindowsDownload = "https://nextdns.io/download/windows/stable"
     const val MacDownload = "https://nextdns.io/download/macos/stable"
-    const val IosAppStore = "https://apps.apple.com/us/app/nextdns/id1463342498"
-    const val MacAppStore = "https://apps.apple.com/us/app/nextdns/id1464122853?mt=12"
     const val YogaDns = "https://yogadns.com"
     const val YogaDnsInstructions = "$YogaDns/docs/nextdns"
     const val CliInstaller = "https://nextdns.io/install"

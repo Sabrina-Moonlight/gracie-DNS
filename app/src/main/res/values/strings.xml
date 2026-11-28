@@ -16,11 +16,9 @@
     <string name="api_key_account">API Key Account</string>
     <string name="app_settings">APP SETTINGS</string>
     <string name="application_activated_successfully">Application activated successfully.</string>
-    <string name="automatically_bypass_age_verification_checks_used_by_certain_websites_such_as_adult_content_sites">Automatically bypass age verification checks used by certain websites, such as adult content sites, to verify a visitor’s age before allowing access.</string>
     <string name="blocked">%1$s (%2$s%%) blocked</string>
     <string name="blockerndisabled">Blocker\nDisabled</string>
     <string name="blocklists_trackers_affiliate_links">Blocklists, trackers, affiliate links</string>
-    <string name="bypass_age_verification">Bypass Age Verification</string>
     <string name="cannot_load_stats">Cannot load stats</string>
     <string name="change_account_settings_for">Manage profiles, log out</string>
     <string name="change_provider">Change Provider</string>
@@ -40,11 +38,9 @@
     <string name="device_name_is_not_set">Device Name is not set</string>
     <string name="disable_blocker">Disable DNS</string>
     <string name="done">Done!</string>
-    <string name="download">Download</string>
     <string name="email">Email</string>
     <string name="enable_blocker">Enable DNS</string>
     <string name="enable_or_disable_blocker_state_notifications">Enable or disable state notifications</string>
-    <string name="enhanced">" (Enhanced)"</string>
     <string name="enter_a_domain">Enter a domain…</string>
     <string name="enter_a_hostname">Enter a hostname…</string>
     <string name="failed_to_add">Failed to add %1$s</string>
@@ -74,7 +70,6 @@
     <string name="logs_performance_block_page">Performance, rewrites, access</string>
     <string name="mynextdnsioaccount">my.nextdns.io/account</string>
     <string name="network_error_please_try_again">Network error. Please try again.</string>
-    <string name="new_update">New Update</string>
     <string name="next">Next</string>
     <string name="nextdns_name">NextDNS</string>
     <string name="nextdns_profile_settings">NEXTDNS PROFILE SETTINGS</string>
@@ -116,8 +111,6 @@
     <string name="unknown_error">Unknown error</string>
     <string name="uptime">Uptime</string>
     <string name="use_a_custom_hostname_for_the_dns_server">Use a custom hostname for the DNS server.</string>
-    <string name="version_ncreated_by_eyal_meirom">Version %1$s\nCreated by Eyal Meirom</string>
-    <string name="version_v_is_available_would_you_like_to_download_it">Version v%1$s is available.\nWould you like to download it?</string>
     <string name="waiting_for_permission">Waiting for permission…</string>
     <string name="welcome_to_adns">Welcome to ADNS</string>
     <string name="you_can_create_one_at_the_nextdns_website">"You can create one at the NextDNS website: "</string>
@@ -134,7 +127,6 @@
     <string name="preferences">PREFERENCES</string>
     <string name="failed_to_load_logs_check_your_connection">Failed to load logs. Check your connection.</string>
     <string name="added_to">Added %1$s to %2$s</string>
-    <string name="view_your_dns_logs">View and search your DNS logs</string>
     <string name="blocked_only">Blocked only</string>
     <string name="show_only_blocked_items">Show only blocked items</string>
     <string name="enabled_only">Enabled only</string>
@@ -374,7 +366,6 @@
     <string name="wifi_battery_optimization_description">Battery optimization may interrupt Wi-Fi monitoring. You can review the system setting, but this is not a location permission.</string>
     <string name="settings_status_header">STATUS</string>
     <string name="toggling_settings">TOGGLING SETTINGS</string>
-    <string name="app_icon">App icon</string>
     <string name="appearance">Appearance</string>
     <string name="appearance_description">Choose how ADNS looks on this device</string>
     <string name="theme_system_default">System default</string>
@@ -416,7 +407,6 @@
     <string name="percentage">Percentage</string>
     <string name="location">Location</string>
     <string name="isp">ISP</string>
-    <string name="country">Country</string>
     <string name="country_code">Country Code</string>
     <string name="network">Network</string>
     <string name="cellular">Cellular</string>
@@ -435,8 +425,6 @@
     <string name="saved_dns_servers">Saved DNS servers</string>
     <string name="delete_saved_dns">Delete saved DNS</string>
     <string name="controld_title">ControlD</string>
-    <string name="controld_back">Back</string>
-    <string name="controld_connected">Connected to ControlD</string>
     <string name="controld_sign_out">Sign out</string>
     <string name="controld_token_help">Paste your ControlD API token. You can create one at controld.com/dashboard/api (the "Read" permission is enough).</string>
     <string name="controld_token_label">API token</string>
@@ -448,12 +436,10 @@
     <string name="controld_error_other">ControlD returned an unexpected response.</string>
     <string name="controld_provider_row">ControlD account</string>
     <string name="controld_provider_row_desc">Sign in with an API token</string>
-    <string name="controld_endpoints_title">Your devices</string>
     <string name="controld_endpoints_help">Tap a device to use its address as your DNS.</string>
     <string name="controld_endpoints_error">Could not load your devices.</string>
     <string name="controld_endpoints_empty">No devices found in your account.</string>
     <string name="controld_endpoint_no_host">No DNS address available</string>
-    <string name="controld_endpoint_applied">In use</string>
     <string name="controld_filters_active">Active filters:</string>
     <string name="controld_filters_none">No active filters</string>
     <string name="controld_filters_error">Could not load the filters</string>

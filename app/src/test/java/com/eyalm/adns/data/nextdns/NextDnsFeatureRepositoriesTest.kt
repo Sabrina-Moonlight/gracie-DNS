@@ -212,21 +212,4 @@ class NextDnsFeatureRepositoriesTest {
         )
         assertEquals("{\"active\":true}", request.body.readUtf8())
     }
-
-    @Test
-    fun `recreation patch omits unchanged active field`() = runTest {
-        server.enqueue(MockResponse().setResponseCode(204))
-        val repository = NextDnsRecreationRepository(api)
-
-        val result = repository.updateItem(
-            profileId = "profile-id",
-            collection = com.eyalm.adns.data.nextdns.recreation.RecreationItemCollection.Services,
-            itemId = "roblox",
-            recreation = true,
-        )
-
-        assertTrue(result is ApiResult.Success)
-        val request = server.takeRequest()
-        assertEquals("{\"recreation\":true}", request.body.readUtf8())
-    }
 }

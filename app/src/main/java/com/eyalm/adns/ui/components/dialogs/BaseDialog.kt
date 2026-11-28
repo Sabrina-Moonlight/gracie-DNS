@@ -95,22 +95,6 @@ fun BaseDialog(
 }
 
 @Composable
-fun InformationDialog(
-    title: String,
-    body: String,
-    confirmLabel: String,
-    onConfirm: () -> Unit,
-    onDismiss: () -> Unit,
-) = BaseDialog(
-    title = title,
-    body = body,
-    confirmLabel = confirmLabel,
-    destructive = false,
-    onConfirm = onConfirm,
-    onDismiss = onDismiss,
-)
-
-@Composable
 fun ConfirmationDialog(
     title: String,
     body: String? = null,

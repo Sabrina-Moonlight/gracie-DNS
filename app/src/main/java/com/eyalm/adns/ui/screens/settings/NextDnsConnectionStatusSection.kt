@@ -2,21 +2,13 @@ package com.eyalm.adns.ui.screens.settings
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Dns
-import androidx.compose.material.icons.filled.Error
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.SyncProblem
-import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.eyalm.adns.R
@@ -62,28 +54,6 @@ fun NextDnsConnectionStatusSection(
             } else null,
         )
     }
-}
-
-@Composable
-private fun statusIcon(status: NextDnsConnectionStatus?): ImageVector = when (status) {
-    null -> Icons.Filled.Refresh
-    is NextDnsConnectionStatus.UsingSelectedProfile -> Icons.Filled.CheckCircle
-    is NextDnsConnectionStatus.UsingDifferentProfile -> Icons.Filled.SyncProblem
-    is NextDnsConnectionStatus.UsingNextDnsWithoutProfile -> Icons.Filled.Info
-    is NextDnsConnectionStatus.NotUsingNextDns -> Icons.Filled.Dns
-    is NextDnsConnectionStatus.Offline -> Icons.Filled.WifiOff
-    is NextDnsConnectionStatus.Unavailable -> Icons.Filled.Error
-}
-
-@Composable
-private fun statusIconColor(status: NextDnsConnectionStatus?): Color = when (status) {
-    null -> MaterialTheme.colorScheme.onSurfaceVariant
-    is NextDnsConnectionStatus.UsingSelectedProfile -> MaterialTheme.colorScheme.primary
-    is NextDnsConnectionStatus.UsingDifferentProfile -> MaterialTheme.colorScheme.tertiary
-    is NextDnsConnectionStatus.UsingNextDnsWithoutProfile -> MaterialTheme.colorScheme.secondary
-    is NextDnsConnectionStatus.NotUsingNextDns -> MaterialTheme.colorScheme.error
-    is NextDnsConnectionStatus.Offline -> MaterialTheme.colorScheme.onSurfaceVariant
-    is NextDnsConnectionStatus.Unavailable -> MaterialTheme.colorScheme.error
 }
 
 @Composable
