@@ -19,7 +19,6 @@ import com.eyalm.adns.data.dns.AndroidPrivateDnsSettings
 import com.eyalm.adns.data.dns.DnsConfigurationRepository
 import com.eyalm.adns.data.dns.DnsConfigurationResult
 import com.eyalm.adns.data.dns.DnsDisableBehaviorRepositories
-import com.eyalm.adns.data.dns.DnsWriteResult
 import com.eyalm.adns.data.dns.PrivateDnsController
 import com.eyalm.adns.data.provider.DnsProviderCatalog
 import com.eyalm.adns.data.provider.DnsProviderSelection
@@ -134,33 +133,6 @@ class DnsRepository(rawContext: Context) {
     suspend fun toggle(): DnsConfigurationResult {
         if (!canControlPrivateDns()) return DnsConfigurationResult.PermissionMissing
         return configurationRepository.toggle().also(::onConfigurationResult)
-    }
-
-    suspend fun setEnabled(enabled: Boolean): DnsConfigurationResult {
-        if (!canControlPrivateDns()) return DnsConfigurationResult.PermissionMissing
-        val result = if (enabled) {
-            when (val write = privateDnsController.enable(getDnsUrl())) {
-                is DnsWriteResult.Success -> DnsConfigurationResult.StateChanged(write.observation)
-                DnsWriteResult.PermissionMissing -> DnsConfigurationResult.PermissionMissing
-                DnsWriteResult.MissingHostname -> DnsConfigurationResult.MissingHostname
-                is DnsWriteResult.Failure,
-                is DnsWriteResult.Rejected,
-                -> DnsConfigurationResult.WriteFailed(write)
-            }
-        } else {
-            when (
-                val write = privateDnsController.disable(disableBehaviorRepository.behavior.value)
-            ) {
-                is DnsWriteResult.Success -> DnsConfigurationResult.StateChanged(write.observation)
-                DnsWriteResult.PermissionMissing -> DnsConfigurationResult.PermissionMissing
-                DnsWriteResult.MissingHostname -> DnsConfigurationResult.MissingHostname
-                is DnsWriteResult.Failure,
-                is DnsWriteResult.Rejected,
-                -> DnsConfigurationResult.WriteFailed(write)
-            }
-        }
-        onConfigurationResult(result)
-        return result
     }
 
     suspend fun changeSelection(
@@ -295,7 +267,7 @@ class DnsRepository(rawContext: Context) {
         try {
             shortcutManager.dynamicShortcuts = listOf(toggleShortcut)
         } catch (e: Exception) {
-            Log.e("DnsRepository", "Failed to update shortcuts")
+            Log.e("DnsRepository", "Failed to update shortcuts", e)
         }
     }
 

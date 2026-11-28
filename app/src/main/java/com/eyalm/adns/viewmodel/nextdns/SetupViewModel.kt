@@ -21,7 +21,6 @@ data class SetupUiState(
     val content: SetupContent? = null,
     val loading: Boolean = false,
     val linkingIp: Boolean = false,
-    val checkingLinkedIp: Boolean = false,
     val canManageLinkedIp: Boolean = false,
     val linkIpAvailable: Boolean = false,
     val advancedOptionsVisible: Boolean = false,
@@ -75,7 +74,6 @@ class SetupViewModel(application: Application) : AndroidViewModel(application) {
             current.copy(
                 loading = true,
                 linkingIp = false,
-                checkingLinkedIp = false,
                 linkIpAvailable = false,
                 advancedOptionsVisible = false,
                 error = null,
@@ -91,7 +89,6 @@ class SetupViewModel(application: Application) : AndroidViewModel(application) {
                         content = result.value.content,
                         loading = false,
                         linkingIp = false,
-                        checkingLinkedIp = result.value.linkIpCapability != null,
                         linkIpAvailable = false,
                         error = null,
                     )
@@ -110,7 +107,6 @@ class SetupViewModel(application: Application) : AndroidViewModel(application) {
                     _state.value = _state.value.copy(
                         loading = false,
                         linkingIp = false,
-                        checkingLinkedIp = false,
                         error = result,
                     )
                 }
@@ -292,7 +288,6 @@ class SetupViewModel(application: Application) : AndroidViewModel(application) {
             val result = repository.getCurrentPublicIp(capability)
             if (!isCurrentRequest(profileId, generation)) return@launch
             _state.value = _state.value.copy(
-                checkingLinkedIp = false,
                 linkIpAvailable = when (result) {
                     is ApiResult.Success -> shouldShowLinkIp(result.value, linkedIp)
                     else -> true

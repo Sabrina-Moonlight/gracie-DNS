@@ -17,9 +17,6 @@ internal interface ControlDApi {
     @GET("users")
     suspend fun users(): Response<JsonObject>
 
-    @GET("profiles")
-    suspend fun profiles(): Response<JsonObject>
-
     @GET("devices")
     suspend fun devices(): Response<JsonObject>
 

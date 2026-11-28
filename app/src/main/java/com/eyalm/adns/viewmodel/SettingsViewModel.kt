@@ -242,13 +242,10 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
 
     val selectedProvider = repository.getSelectionFlow()
     val disableBehavior = repository.getDisableBehaviorFlow()
-    private val _providerChangeResult = MutableStateFlow<DnsConfigurationResult?>(null)
-    val providerChangeResult = _providerChangeResult.asStateFlow()
 
     fun setProvider(selection: DnsProviderSelection) {
         viewModelScope.launch {
             val result = repository.changeSelection(selection)
-            _providerChangeResult.value = result
             if (result == DnsConfigurationResult.PermissionMissing) {
                 setPage(Page.ACTIVATION)
             }

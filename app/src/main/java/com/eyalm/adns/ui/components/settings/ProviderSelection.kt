@@ -42,14 +42,45 @@ fun LazyListScope.ProviderSelection(
     onCustomConfirm: () -> Unit,
     isCustomHostnameValid: Boolean,
     showCustomConfirmButton: Boolean = true,
+    controlDTitle: String? = null,
+    controlDDescription: String? = null,
+    onControlDClick: (() -> Unit)? = null,
 ) {
+    val hasControlD = onControlDClick != null
+    val offset = if (hasControlD) 1 else 0
+    val totalRows = catalog.providers.size + 1 + offset
+
+    if (onControlDClick != null) {
+        item(key = "controld_account") {
+            ResourceSettingRow(
+                title = "${controlDTitle.orEmpty()} ${stringResource(R.string.recommended)}",
+                description = controlDDescription,
+                selected = false,
+                onClick = onControlDClick,
+                leading = {
+                    RadioButton(
+                        selected = false,
+                        onClick = null,
+                    )
+                },
+                trailing = {
+                    Icon(
+                        Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                        contentDescription = null,
+                    )
+                },
+                position = segmentPosition(0, totalRows),
+                alignment = Alignment.CenterVertically
+            )
+        }
+    }
 
     catalog.providers.forEachIndexed { index, provider ->
         val selected = currentSelection?.providerId == provider.id && !isCustomSelected
         item(key = provider.id.value) {
             ResourceSettingRow(
                 title = stringResource(provider.titleRes) +
-                    if (provider.id == DnsProviderCatalog.NEXTDNS) {
+                    if (provider.id == DnsProviderCatalog.NEXTDNS && !hasControlD) {
                         " ${stringResource(R.string.recommended)}"
                     } else {
                         ""
@@ -77,7 +108,7 @@ fun LazyListScope.ProviderSelection(
                 } else {
                     null
                 },
-                position = segmentPosition(index, catalog.providers.size + 1),
+                position = segmentPosition(index + offset, totalRows),
                 alignment = Alignment.CenterVertically
             )
         }

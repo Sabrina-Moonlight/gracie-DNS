@@ -5,7 +5,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.eyalm.adns.R
 import com.eyalm.adns.data.nextdns.recreation.ParentalRecreationItem
-import com.eyalm.adns.data.nextdns.recreation.RecreationItemCollection
 import com.eyalm.adns.data.nextdns.recreation.RecreationScheduleError
 import com.eyalm.adns.data.nextdns.recreation.RecreationScheduleDto
 import com.eyalm.adns.data.nextdns.recreation.RecreationScheduleValidation
@@ -28,7 +27,6 @@ data class RecreationUiState(
     val draftTimes: Map<String, RecreationTimeDraft> = emptyMap(),
     val scheduleErrors: Map<String, RecreationScheduleError> = emptyMap(),
     val savingSchedule: Boolean = false,
-    val savingItems: Set<String> = emptySet(),
     val errorMessage: String? = null,
 )
 
@@ -141,41 +139,6 @@ class RecreationViewModel(application: Application) : AndroidViewModel(applicati
         }
     }
 
-    fun toggleItem(collection: RecreationItemCollection, item: ParentalRecreationItem) {
-        if (!editable) return
-        val profileId = profileId ?: return
-        if (!item.active) return
-        val key = itemKey(collection, item.id)
-        if (key in _state.value.savingItems) return
-
-        _state.update { it.copy(savingItems = it.savingItems + key, errorMessage = null) }
-        viewModelScope.launch {
-            when (
-                repository.updateItem(
-                    profileId,
-                    collection,
-                    item.id,
-                    !item.recreation,
-                )
-            ) {
-                is ApiResult.Success -> {
-                    _state.update { it.copy(savingItems = it.savingItems - key) }
-                    load(profileId, editable)
-                }
-
-                else -> _state.update {
-                    it.copy(
-                        savingItems = it.savingItems - key,
-                        errorMessage = requestFailureMessage(),
-                    )
-                }
-            }
-        }
-    }
-
-    fun isSavingItem(collection: RecreationItemCollection, itemId: String): Boolean =
-        itemKey(collection, itemId) in _state.value.savingItems
-
     private fun updateDraft(day: String, transform: (RecreationTimeDraft) -> RecreationTimeDraft) {
         _state.update { state ->
             state.copy(
@@ -188,8 +151,5 @@ class RecreationViewModel(application: Application) : AndroidViewModel(applicati
 
     private fun requestFailureMessage(): String =
         getApplication<Application>().getString(R.string.network_error_please_try_again)
-
-    private fun itemKey(collection: RecreationItemCollection, itemId: String): String =
-        "${collection.wireName}:$itemId"
 
 }

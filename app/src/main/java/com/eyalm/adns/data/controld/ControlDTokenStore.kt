@@ -46,19 +46,13 @@ class ControlDTokenStore private constructor(context: Context) {
     fun hasToken(): Boolean = getToken() != null
 
     @Synchronized
-    fun saveEmail(email: String?) {
-        prefs.edit { if (email.isNullOrBlank()) remove(KEY_EMAIL) else putString(KEY_EMAIL, email) }
-    }
-
-    fun getEmail(): String? = prefs.getString(KEY_EMAIL, null)
-
-    @Synchronized
     fun clear() {
         prefs.edit { remove(KEY_TOKEN); remove(KEY_EMAIL) }
     }
 
     companion object {
         private const val KEY_TOKEN = "api_token"
+        /** Ya no se guarda el email; la clave se conserva solo para borrar el que quedó de versiones anteriores. */
         private const val KEY_EMAIL = "email"
 
         @Volatile

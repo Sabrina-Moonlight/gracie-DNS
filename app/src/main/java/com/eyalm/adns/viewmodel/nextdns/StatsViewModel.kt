@@ -48,7 +48,6 @@ data class StatsUiState(
     val trackerLoading: Boolean = false,
     val initialLoading: Boolean = false,
     val graphLoading: Boolean = false,
-    val devicesLoading: Boolean = false,
     val refreshing: Boolean = false,
     val graphError: ApiResult<*>? = null,
 )
@@ -185,7 +184,6 @@ class StatsViewModel(application: Application) : AndroidViewModel(application) {
             scope = AnalyticsScope(),
             initialLoading = true,
             graphLoading = true,
-            devicesLoading = true,
         )
         loadDevices(profileId)
         loadScope(profileId, AnalyticsScope())
@@ -193,7 +191,6 @@ class StatsViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun loadDevices(profileId: String) {
         val generation = ++deviceGeneration
-        _state.update { it.copy(devicesLoading = true) }
         viewModelScope.launch {
             when (val result = analyticsRepository.getDevices(profileId)) {
                 is ApiResult.Success -> {
@@ -201,7 +198,6 @@ class StatsViewModel(application: Application) : AndroidViewModel(application) {
                     _state.update { current ->
                         current.copy(
                             devices = result.value,
-                            devicesLoading = false,
                         )
                     }
                     val selectedDevice = _state.value.scope.deviceId
@@ -214,11 +210,7 @@ class StatsViewModel(application: Application) : AndroidViewModel(application) {
                     }
                 }
 
-                else -> {
-                    if (isCurrentProfile(profileId) && generation == deviceGeneration) {
-                        _state.update { it.copy(devicesLoading = false) }
-                    }
-                }
+                else -> Unit
             }
         }
     }

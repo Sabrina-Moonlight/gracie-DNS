@@ -1,16 +1,5 @@
 package com.eyalm.adns.data.controld
 
-/** Cuenta de ControlD (solo lo que usamos). */
-data class ControlDAccount(
-    val email: String?,
-)
-
-/** Perfil de ControlD: conjunto de reglas y filtros. */
-data class ControlDProfile(
-    val id: String,
-    val name: String,
-)
-
 /** Filtro de un perfil de ControlD, activado o no. */
 data class ControlDFilter(
     val id: String,
@@ -28,9 +17,6 @@ data class ControlDEndpoint(
     val profileId: String?,
     val profileName: String?,
     val dotHost: String?,
-    val dohUrl: String?,
-    val ipv4: List<String>,
-    val ipv6: List<String>,
 )
 
 enum class ControlDFailureKind {

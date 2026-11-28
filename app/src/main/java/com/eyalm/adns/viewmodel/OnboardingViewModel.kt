@@ -1,6 +1,5 @@
 package com.eyalm.adns.viewmodel
 
-import android.Manifest
 import android.app.Application
 import android.content.ComponentName
 import android.content.ServiceConnection

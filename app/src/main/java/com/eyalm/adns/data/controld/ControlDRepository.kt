@@ -48,16 +48,8 @@ class ControlDRepository(
     }
 
     /** Sirve para comprobar que el token funciona. */
-    suspend fun getAccount(): ControlDResult<ControlDAccount> =
-        call(api::users) { body -> ControlDAccount(email = body.str("email")) }
-
-    suspend fun getProfiles(): ControlDResult<List<ControlDProfile>> =
-        call(api::profiles) { body ->
-            body.objects("profiles").mapNotNull { item ->
-                val id = item.str("PK") ?: return@mapNotNull null
-                ControlDProfile(id = id, name = item.str("name") ?: id)
-            }
-        }
+    suspend fun getAccount(): ControlDResult<Unit> =
+        call(api::users) { }
 
     suspend fun getEndpoints(): ControlDResult<List<ControlDEndpoint>> =
         call(api::devices) { body -> body.objects("devices").mapNotNull(::parseEndpoint) }
@@ -100,9 +92,6 @@ class ControlDRepository(
             profileId = profile?.str("PK"),
             profileName = profile?.str("name"),
             dotHost = dot,
-            dohUrl = resolvers?.str("doh"),
-            ipv4 = resolvers?.strings("v4").orEmpty(),
-            ipv6 = resolvers?.strings("v6").orEmpty(),
         )
     }
 
@@ -165,10 +154,4 @@ private fun JsonObject.objects(key: String): List<JsonObject> {
     val element = get(key)
     if (element == null || !element.isJsonArray) return emptyList()
     return element.asJsonArray.mapNotNull { it.obj() }
-}
-
-private fun JsonObject.strings(key: String): List<String> {
-    val element = get(key)
-    if (element == null || !element.isJsonArray) return emptyList()
-    return element.asJsonArray.mapNotNull { if (it.isJsonPrimitive) it.asString else null }
 }

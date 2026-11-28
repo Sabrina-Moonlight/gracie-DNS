@@ -231,24 +231,17 @@ fun ProvidersScreen(
                             }
                         },
                         isCustomHostnameValid = normalizedCustomHostname != null,
-                    )
-
-                    item(key = "controld_account") {
-                        ResourceSettingRow(
-                            title = stringResource(R.string.controld_provider_row),
-                            description = stringResource(R.string.controld_provider_row_desc),
-                            selected = false,
-                            position = segmentPosition(0, 1),
-                            onClick = {
-                                context.startActivity(
-                                    android.content.Intent(
-                                        context,
-                                        com.eyalm.adns.ControlDLoginActivity::class.java,
-                                    )
+                        controlDTitle = stringResource(R.string.controld_provider_row),
+                        controlDDescription = stringResource(R.string.controld_provider_row_desc),
+                        onControlDClick = {
+                            context.startActivity(
+                                android.content.Intent(
+                                    context,
+                                    com.eyalm.adns.ControlDLoginActivity::class.java,
                                 )
-                            },
-                        )
-                    }
+                            )
+                        },
+                    )
 
                     if (savedDns.isNotEmpty()) {
                         item(key = "saved_dns_header") {
