@@ -436,6 +436,7 @@
     <string name="controld_error_other">ControlD returned an unexpected response.</string>
     <string name="controld_provider_row">ControlD account</string>
     <string name="controld_provider_row_desc">Sign in with an API token</string>
+    <string name="controld_provider_row_desc_connected">Connected. Tap to choose a device.</string>
     <string name="controld_endpoints_help">Tap a device to use its address as your DNS.</string>
     <string name="controld_endpoints_error">Could not load your devices.</string>
     <string name="controld_endpoints_empty">No devices found in your account.</string>

@@ -36,6 +36,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -45,7 +46,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.eyalm.adns.data.controld.ControlDTokenStore
 import com.eyalm.adns.R
 import com.eyalm.adns.data.provider.DnsProviderCatalog
 import com.eyalm.adns.data.provider.DnsProviderSelection
@@ -83,6 +88,19 @@ fun ProvidersScreen(
             }
         }
     }
+    val lifecycleOwner = LocalLifecycleOwner.current
+    var controlDLoggedIn by remember { mutableStateOf(ControlDTokenStore.getInstance(context).hasToken()) }
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                controlDLoggedIn = ControlDTokenStore.getInstance(context).hasToken()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+    val controlDInUse = controlDLoggedIn &&
+        (currentSelection as? DnsProviderSelection.Custom)?.hostname?.endsWith("controld.com", ignoreCase = true) == true
     val isKeyboardVisible = WindowInsets.isImeVisible
     var isCustomSelected by remember(currentSelection) {
         mutableStateOf(currentSelection is DnsProviderSelection.Custom)
@@ -160,7 +178,10 @@ fun ProvidersScreen(
                 modifier = modifier.fillMaxSize(),
             ) { innerPadding ->
                 val controlDTitleText = stringResource(R.string.controld_provider_row)
-                val controlDDescText = stringResource(R.string.controld_provider_row_desc)
+                val controlDDescText = stringResource(
+                    if (controlDLoggedIn) R.string.controld_provider_row_desc_connected
+                    else R.string.controld_provider_row_desc
+                )
                 LazyColumn(
                     state = listState,
                     modifier = Modifier
@@ -229,6 +250,7 @@ fun ProvidersScreen(
                         isCustomHostnameValid = normalizedCustomHostname != null,
                         controlDTitle = controlDTitleText,
                         controlDDescription = controlDDescText,
+                        controlDSelected = controlDInUse,
                         onControlDClick = {
                             context.startActivity(
                                 android.content.Intent(

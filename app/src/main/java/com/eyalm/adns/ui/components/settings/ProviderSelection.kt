@@ -44,6 +44,7 @@ fun LazyListScope.ProviderSelection(
     showCustomConfirmButton: Boolean = true,
     controlDTitle: String? = null,
     controlDDescription: String? = null,
+    controlDSelected: Boolean = false,
     onControlDClick: (() -> Unit)? = null,
 ) {
     val hasControlD = onControlDClick != null
@@ -55,11 +56,11 @@ fun LazyListScope.ProviderSelection(
             ResourceSettingRow(
                 title = "${controlDTitle.orEmpty()} ${stringResource(R.string.recommended)}",
                 description = controlDDescription,
-                selected = false,
+                selected = controlDSelected,
                 onClick = onControlDClick,
                 leading = {
                     RadioButton(
-                        selected = false,
+                        selected = controlDSelected,
                         onClick = null,
                     )
                 },
